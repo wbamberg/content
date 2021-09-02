@@ -15,32 +15,30 @@ tags:
   - sdpMid
 browser-compat: api.RTCIceCandidateInit.sdpMid
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The optional property <strong><code>sdpMid</code></strong> in the <strong>{{domxref("RTCIceCandidateInit")}}</strong> dictionary specifies the value of the {{domxref("RTCIceCandidate")}} object's {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} property.</p>
+The optional property **`sdpMid`** in the **{{domxref("RTCIceCandidateInit")}}** dictionary specifies the value of the {{domxref("RTCIceCandidate")}} object's {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} property.
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>{{page("/en-US/docs/Web/API/RTCIceCandidate/sdpMid", "Value")}}</p>
+{{page("/en-US/docs/Web/API/RTCIceCandidate/sdpMid", "Value")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>...</p>
+...
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("RTCIceCandidate.sdpMid")}}</li>
- <li>{{domxref("RTCPeerConnection.addIceCandidate()")}}</li>
- <li>{{event("icecandidate")}}</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCIceCandidate.sdpMid")}}
+- {{domxref("RTCPeerConnection.addIceCandidate()")}}
+- {{event("icecandidate")}}
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)

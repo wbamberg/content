@@ -2,80 +2,81 @@
 title: DOMPoint.fromPoint()
 slug: Web/API/DOMPoint/fromPoint
 tags:
-- API
-- Coordinates
-- DOM
-- DOMPoint
-- Geometry
-- Geometry Interfaces
-- Method
-- Point
-- Reference
-- Static
-- Static Method
-- fromPoint
+  - API
+  - Coordinates
+  - DOM
+  - DOMPoint
+  - Geometry
+  - Geometry Interfaces
+  - Method
+  - Point
+  - Reference
+  - Static
+  - Static Method
+  - fromPoint
 browser-compat: api.DOMPoint.fromPoint
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The static <strong>{{domxref("DOMPoint")}}</strong> method
-    <code>fromPoint()</code> creates and returns a new mutable <code>DOMPoint</code>
-    object given a source point.</p>
+The static **{{domxref("DOMPoint")}}** method
+`fromPoint()` creates and returns a new mutable `DOMPoint`
+object given a source point.
 
-<p>The source point is specified as a
-  {{domxref("DOMPointInit")}}-compatible object, which includes both
-  {{domxref("DOMPoint")}} and {{domxref("DOMPointReadOnly")}}.</p>
+The source point is specified as a
+{{domxref("DOMPointInit")}}-compatible object, which includes both
+{{domxref("DOMPoint")}} and {{domxref("DOMPointReadOnly")}}.
 
-<p>You can also create a new <code>DOMPoint</code> object using the
-  {{domxref("DOMPoint.DOMPoint", "new DOMPoint()")}} constructor.</p>
+You can also create a new `DOMPoint` object using the
+{{domxref("DOMPoint.DOMPoint", "new DOMPoint()")}} constructor.
 
-<p>Although this interface is based on <code>DOMPointReadOnly</code>, it is not read-only;
-  the properties within may be changed at will.</p>
+Although this interface is based on `DOMPointReadOnly`, it is not read-only;
+the properties within may be changed at will.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>point</em> = DOMPoint.fromPoint(<em>sourcePoint</em>);</pre>
+```js
+var point = DOMPoint.fromPoint(sourcePoint);
+```
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<dl>
-  <dt><code>sourcePoint</code></dt>
-  <dd>A {{domxref("DOMPointInit")}}-compliant object, which includes both
+- `sourcePoint`
+  - : A {{domxref("DOMPointInit")}}-compliant object, which includes both
     {{domxref("DOMPoint")}} and {{domxref("DOMPointReadOnly")}}, from which to take the
-    values of the new point's properties.</dd>
-</dl>
+    values of the new point's properties.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("DOMPoint")}} object whose coordinate and perspective values are
-  identical to those in the source point. The point's properties are mutable and may be
-  changed at any time.</p>
+A new {{domxref("DOMPoint")}} object whose coordinate and perspective values are
+identical to those in the source point. The point's properties are mutable and may be
+changed at any time.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_mutable_point_from_a_read-only_point">Creating a mutable point from a
-  read-only point</h3>
+### Creating a mutable point from a read-only point
 
-<p>If you have a {{domxref("DOMPointReadOnly")}} object, you can easily create a mutable
-  copy of that point:</p>
+If you have a {{domxref("DOMPointReadOnly")}} object, you can easily create a mutable
+copy of that point:
 
-<pre class="brush: js">var mutablePoint = DOMPoint.fromPoint(readOnlyPoint);</pre>
+```js
+var mutablePoint = DOMPoint.fromPoint(readOnlyPoint);
+```
 
-<h3 id="Creating_a_2D_point">Creating a 2D point</h3>
+### Creating a 2D point
 
-<p>This sample creates a 2D point, specifying an inline object that includes the values to
-  use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y",
-  "y")}}. The <em>z</em> and <em>w</em> properties are allowed to keep their default
-  values (0 and 1 respectively).</p>
+This sample creates a 2D point, specifying an inline object that includes the values to
+use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y",
+  "y")}}. The _z_ and _w_ properties are allowed to keep their default
+values (0 and 1 respectively).
 
-<pre
-  class="brush: js">var center = DOMPoint.fromPoint({x: 75, y: -50, z: -55, w: 0.25});</pre>
+```js
+var center = DOMPoint.fromPoint({x: 75, y: -50, z: -55, w: 0.25});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,51 +2,51 @@
 title: EXT_disjoint_timer_query.createQueryEXT()
 slug: Web/API/EXT_disjoint_timer_query/createQueryEXT
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL extension
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.createQueryEXT
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>EXT_disjoint_timer_query.createQueryEXT()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> creates and initializes
-  {{domxref("WebGLTimerQueryEXT")}} objects, which track the time needed to fully complete
-  a set of GL commands.</p>
+The **`EXT_disjoint_timer_query.createQueryEXT()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes
+{{domxref("WebGLTimerQueryEXT")}} objects, which track the time needed to fully complete
+a set of GL commands.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLTimerQueryEXT <var>ext</var>.createQueryEXT();
-</pre>
+```js
+WebGLTimerQueryEXT ext.createQueryEXT();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLTimerQueryEXT")}} object.</p>
+A {{domxref("WebGLTimerQueryEXT")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var ext = gl.getExtension('EXT_disjoint_timer_query');
+```js
+var ext = gl.getExtension('EXT_disjoint_timer_query');
 var query = ext.createQueryExt();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-  <li>{{domxref("WebGLTimerQueryEXT")}}</li>
-  <li>{{domxref("EXT_disjoint_timer_query")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLTimerQueryEXT")}}
+- {{domxref("EXT_disjoint_timer_query")}}

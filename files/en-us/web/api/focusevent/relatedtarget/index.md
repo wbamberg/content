@@ -2,73 +2,47 @@
 title: FocusEvent.relatedTarget
 slug: Web/API/FocusEvent/relatedTarget
 tags:
-- API
-- Event
-- Experimental
-- FocusEvent
-- Property
-- Reference
+  - API
+  - Event
+  - Experimental
+  - FocusEvent
+  - Property
+  - Reference
 browser-compat: api.FocusEvent.relatedTarget
 ---
-<p>{{ apiref("DOM Events") }}</p>
+{{ apiref("DOM Events") }}
 
-<p>The <code><strong>FocusEvent.relatedTarget</strong></code> read-only property is the
-  secondary target, depending on the type of event:</p>
+The **`FocusEvent.relatedTarget`** read-only property is the
+secondary target, depending on the type of event:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Event name</th>
-      <th scope="col"><code>target</code></th>
-      <th scope="col"><code>relatedTarget</code></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{Event("blur")}}</td>
-      <td>The {{domxref("EventTarget")}} losing focus</td>
-      <td>The {{domxref("EventTarget")}} receiving focus (if any).</td>
-    </tr>
-    <tr>
-      <td>{{Event("focus")}}</td>
-      <td>The {{domxref("EventTarget")}} receiving focus</td>
-      <td>The {{domxref("EventTarget")}} losing focus (if any)</td>
-    </tr>
-    <tr>
-      <td>{{Event("focusin")}}</td>
-      <td>The {{domxref("EventTarget")}} receiving focus</td>
-      <td>The {{domxref("EventTarget")}} losing focus (if any)</td>
-    </tr>
-    <tr>
-      <td>{{Event("focusout")}}</td>
-      <td>The {{domxref("EventTarget")}} losing focus</td>
-      <td>The {{domxref("EventTarget")}} receiving focus (if any)</td>
-    </tr>
-  </tbody>
-</table>
+| Event name                   | `target`                                                 | `relatedTarget`                                                    |
+| ---------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------ |
+| {{Event("blur")}}     | The {{domxref("EventTarget")}} losing focus    | The {{domxref("EventTarget")}} receiving focus (if any). |
+| {{Event("focus")}}     | The {{domxref("EventTarget")}} receiving focus | The {{domxref("EventTarget")}} losing focus (if any)     |
+| {{Event("focusin")}} | The {{domxref("EventTarget")}} receiving focus | The {{domxref("EventTarget")}} losing focus (if any)     |
+| {{Event("focusout")}} | The {{domxref("EventTarget")}} losing focus    | The {{domxref("EventTarget")}} receiving focus (if any)  |
 
-<p>Note that <a href="https://stackoverflow.com/a/42764495/1026">many elements can't have
-    focus</a>, which is a common reason for <code>relatedTarget</code> to be
-  <code>null</code>. <code>relatedTarget</code> may also be set to <code>null</code> for
-  security reasons, like when tabbing in or out of a page.</p>
+Note that [many elements can't have
+focus](https://stackoverflow.com/a/42764495/1026), which is a common reason for `relatedTarget` to be
+`null`. `relatedTarget` may also be set to `null` for
+security reasons, like when tabbing in or out of a page.
 
-<p>{{domxref("MouseEvent.relatedTarget")}} is a similar property for mouse events.</p>
+{{domxref("MouseEvent.relatedTarget")}} is a similar property for mouse events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>secondTarget</em> = <em>focusEvent</em>.relatedTarget</pre>
+```js
+secondTarget = focusEvent.relatedTarget
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("FocusEvent")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("FocusEvent")}} interface it belongs to.

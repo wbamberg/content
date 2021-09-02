@@ -2,21 +2,21 @@
 title: WebSocket.readyState
 slug: Web/API/WebSocket/readyState
 tags:
-- API
-- Property
-- Reference
-- Web API
-- WebSocket
+  - API
+  - Property
+  - Reference
+  - Web API
+  - WebSocket
 browser-compat: api.WebSocket.readyState
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>The <strong><code>WebSocket.readyState</code></strong> read-only property returns the
-  current state of the {{domxref("WebSocket")}} connection.</p>
+The **`WebSocket.readyState`** read-only property returns the
+current state of the {{domxref("WebSocket")}} connection.
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>One of the following <code>unsigned short</code> values:</p>
+One of the following `unsigned short` values:
 
 <table class="standard-table">
   <tbody>
@@ -48,10 +48,10 @@ browser-compat: api.WebSocket.readyState
   </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

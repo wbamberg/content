@@ -14,50 +14,49 @@ tags:
   - perspective
 browser-compat: api.DOMPointInit.w
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong>{{domxref("DOMPointInit")}}</strong> dictionary's
-    <code><strong>w</strong></code> property is used to specify the <em>w</em> perspective
-    value of a point in space when either creating or serializing to JSON a
-    {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} object.</p>
+The **{{domxref("DOMPointInit")}}** dictionary's
+**`w`** property is used to specify the _w_ perspective
+value of a point in space when either creating or serializing to JSON a
+{{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>DOMPointInit</em> = {
-  w: <em>wPerspective</em>
+```js
+var DOMPointInit = {
+  w: wPerspective
 };
 
-<em>DOMPointInit</em>.w = <em>wPerspective</em>;
+DOMPointInit.w = wPerspective;
 
-var <em>wPerspective</em> = <em>DOMPointInit</em>.w;</pre>
+var wPerspective = DOMPointInit.w;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the point's <em>w</em> perspective
-  value. This value is <strong>unrestricted</strong>, meaning that it is allowed to be
-  infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
-  "±Infinity")}}).</p>
+A double-precision floating-point value indicating the point's _w_ perspective
+value. This value is **unrestricted**, meaning that it is allowed to be
+infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
+  "±Infinity")}}).
 
-<p>There are two methods which use <code>DOMPointInit</code>:</p>
+There are two methods which use `DOMPointInit`:
 
-<ul>
-  <li>The static function {{domxref("DOMPointReadOnly.fromPoint()")}} takes an object that
-    complies with <code>DOMPointInit</code> as its sole input parameter, to specify the
-    coordinates and perspective value of the new point to be created. This method is, by
-    inheritance, also available as {{domxref("DOMPoint.fromPoint()")}}.</li>
-  <li>The {{domxref("DOMPointReadOnly.toJSON()")}} method returns a
-    <code>DOMPointInit</code> object that describes the same point as the original point.
-    By inheritance, this method is also available as {{domxref("DOMPointReadOnly.toJSON")}}.
-  </li>
-</ul>
+- The static function {{domxref("DOMPointReadOnly.fromPoint()")}} takes an object that
+  complies with `DOMPointInit` as its sole input parameter, to specify the
+  coordinates and perspective value of the new point to be created. This method is, by
+  inheritance, also available as {{domxref("DOMPoint.fromPoint()")}}.
+- The {{domxref("DOMPointReadOnly.toJSON()")}} method returns a
+  `DOMPointInit` object that describes the same point as the original point.
+  By inheritance, this method is also available as {{domxref("DOMPointReadOnly.toJSON")}}.
 
-<p>This value is assumed to be 1 by default if not included in the
-  <code>DOMPointInit</code> object passed into <code>fromPoint()</code>.</p>
+This value is assumed to be 1 by default if not included in the
+`DOMPointInit` object passed into `fromPoint()`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

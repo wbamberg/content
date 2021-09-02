@@ -7,34 +7,21 @@ tags:
   - Helper
   - Reference
 ---
-<p>{{APIRef("Canvas API")}}</p>
+{{APIRef("Canvas API")}}
 
-<p><code><strong>CanvasImageSource</strong></code> provides a mechanism for other interfaces to be used as image sources for some methods of the {{domxref("CanvasDrawImage")}} and {{domxref("CanvasFillStrokeStyles")}} interfaces. It’s just an internal helper type to simplify the specification. It’s not an interface and there are no objects implementing it.</p>
+**`CanvasImageSource`** provides a mechanism for other interfaces to be used as image sources for some methods of the {{domxref("CanvasDrawImage")}} and {{domxref("CanvasFillStrokeStyles")}} interfaces. It’s just an internal helper type to simplify the specification. It’s not an interface and there are no objects implementing it.
 
-<p>The interfaces that it allows to be used as image sources are the following:</p>
+The interfaces that it allows to be used as image sources are the following:
 
-<ul>
- <li>{{domxref("HTMLImageElement")}}</li>
- <li>{{domxref("SVGImageElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{domxref("HTMLCanvasElement")}}</li>
- <li>{{domxref("ImageBitmap")}}</li>
- <li>{{domxref("OffscreenCanvas")}}</li>
-</ul>
+- {{domxref("HTMLImageElement")}}
+- {{domxref("SVGImageElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{domxref("HTMLCanvasElement")}}
+- {{domxref("ImageBitmap")}}
+- {{domxref("OffscreenCanvas")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#canvasimagesource", "CanvasImageSource")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                           | Comment             |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('HTML WHATWG', "scripting.html#canvasimagesource", "CanvasImageSource")}} | {{Spec2('HTML WHATWG')}} | Initial definition. |

@@ -15,32 +15,30 @@ tags:
   - usernameFragment
 browser-compat: api.RTCIceCandidateInit.usernameFragment
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The optional property <strong><code>usernameFragment</code></strong> in the <strong>{{domxref("RTCIceCandidateInit")}}</strong> dictionary specifies the value of the {{domxref("RTCIceCandidate")}} object's {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} property.</p>
+The optional property **`usernameFragment`** in the **{{domxref("RTCIceCandidateInit")}}** dictionary specifies the value of the {{domxref("RTCIceCandidate")}} object's {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} property.
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>{{page("/en-US/docs/Web/API/RTCIceCandidate/usernameFragment", "Value")}}</p>
+{{page("/en-US/docs/Web/API/RTCIceCandidate/usernameFragment", "Value")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>...</p>
+...
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("RTCIceCandidate.usernameFragment")}}</li>
- <li>{{domxref("RTCPeerConnection.addIceCandidate()")}}</li>
- <li>{{event("icecandidate")}}</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCIceCandidate.usernameFragment")}}
+- {{domxref("RTCPeerConnection.addIceCandidate()")}}
+- {{event("icecandidate")}}
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)

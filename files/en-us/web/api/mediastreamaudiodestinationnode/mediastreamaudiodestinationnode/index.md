@@ -10,39 +10,41 @@ tags:
   - Web Audio API
 browser-compat: api.MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>MediaStreamAudioDestinationNode()</strong></code> constructor of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new {{domxref("MediaStreamAudioDestinationNode")}} object instance.</p>
+The **`MediaStreamAudioDestinationNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("MediaStreamAudioDestinationNode")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myAudioDest = new MediaStreamAudioDestinationNode(<em>context</em>, <em>options</em>);</pre>
+```js
+var myAudioDest = new MediaStreamAudioDestinationNode(context, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
+_Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary_.
 
-<dl>
- <dt><em>context</em></dt>
- <dd>An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.</dd>
- <dt><em>options {{optional_inline}}</em></dt>
- <dd>An <code><a href="https://webaudio.github.io/web-audio-api/#dictionary-audionodeoptions-members">AudioNodeOptions</a></code> dictionary object defining the properties you want the <code>MediaStreamAudioDestinationNode</code> to have.</dd>
-</dl>
+- _context_
+  - : An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.
+- _options {{optional_inline}}_
+  - : An [`AudioNodeOptions`](https://webaudio.github.io/web-audio-api/#dictionary-audionodeoptions-members) dictionary object defining the properties you want the `MediaStreamAudioDestinationNode` to have.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("MediaStreamAudioDestinationNode")}} object instance.</p>
+A new {{domxref("MediaStreamAudioDestinationNode")}} object instance.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var ac = new AudioContext();
+```js
+var ac = new AudioContext();
 
-var myDestination = new MediaStreamAudioDestinationNode(<em>ac</em>);</pre>
+var myDestination = new MediaStreamAudioDestinationNode(ac);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,78 +2,71 @@
 title: AudioBuffer()
 slug: Web/API/AudioBuffer/AudioBuffer
 tags:
-- API
-- Audio
-- AudioBuffer
-- Buffer
-- Constructor
-- Media
-- Reference
-- Web Audio
-- Web Audio API
-- sound
+  - API
+  - Audio
+  - AudioBuffer
+  - Buffer
+  - Constructor
+  - Media
+  - Reference
+  - Web Audio
+  - Web Audio API
+  - sound
 browser-compat: api.AudioBuffer.AudioBuffer
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>AudioBuffer</code></strong> constructor of
-    the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
-    {{domxref("AudioBuffer")}} object.</p>
+The **`AudioBuffer`** constructor of
+the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
+{{domxref("AudioBuffer")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioBuffer = new AudioBuffer(options);
-</pre>
+```js
+var audioBuffer = new AudioBuffer(options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
+_Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary_.
 
-<dl>
-  <dt><code>options</code></dt>
-  <dd>Options are as follows:
-    <ul>
-      <li><code>length</code>: The size of the audio buffer in sample-frames. To determine
-        the <code>length</code> to use for a specific number of seconds of audio, use
-        <code>numSeconds * sampleRate</code>.</li>
-      <li><code>numberOfChannels</code>: The number of channels for the buffer. The
-        default is 1, and all user agents are required to support at least 32 channels.
-      </li>
-      <li><code>sampleRate</code>: The sample rate in Hz for the buffer. The default is
-        the sample rate of the <code>context</code> used in constructing this object. User
-        agents are required to support sample rates from 8,000 Hz to 96,000 Hz (but are
-        allowed to go farther outside this range).</li>
-    </ul>
-  </dd>
-</dl>
+- `options`
 
-<h4 id="Deprecated_parameters">Deprecated parameters</h4>
+  - : Options are as follows:
 
-<dl>
-  <dt><code>context</code> {{Deprecated_Inline}}</dt>
-  <dd>A reference to an {{domxref("AudioContext")}}. This parameter was removed from the
-    spec.</dd>
-</dl>
+    - `length`: The size of the audio buffer in sample-frames. To determine
+      the `length` to use for a specific number of seconds of audio, use
+      `numSeconds * sampleRate`.
+    - `numberOfChannels`: The number of channels for the buffer. The
+      default is 1, and all user agents are required to support at least 32 channels.
+    - `sampleRate`: The sample rate in Hz for the buffer. The default is
+      the sample rate of the `context` used in constructing this object. User
+      agents are required to support sample rates from 8,000 Hz to 96,000 Hz (but are
+      allowed to go farther outside this range).
 
-<h3 id="Return_value">Return value</h3>
+#### Deprecated parameters
 
-<p>A new {{domxref("AudioBuffer")}} object instance.</p>
+- `context` {{Deprecated_Inline}}
+  - : A reference to an {{domxref("AudioContext")}}. This parameter was removed from the
+    spec.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>One or more of the options are negative or otherwise has an invalid value (such as
-    <code>numberOfChannels</code> being higher than supported, or a
-    <code>sampleRate</code> outside the nominal range).</dd>
-  <dt><code>RangeError</code></dt>
-  <dd>There isn't enough memory available to allocate the buffer.</dd>
-</dl>
+A new {{domxref("AudioBuffer")}} object instance.
 
-<h2 id="Specifications">Specifications</h2>
+### Exceptions
+
+- `NotSupportedError`
+  - : One or more of the options are negative or otherwise has an invalid value (such as
+    `numberOfChannels` being higher than supported, or a
+    `sampleRate` outside the nominal range).
+- `RangeError`
+  - : There isn't enough memory available to allocate the buffer.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

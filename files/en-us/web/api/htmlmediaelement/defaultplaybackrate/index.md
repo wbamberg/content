@@ -9,36 +9,36 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.defaultPlaybackRate
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLMediaElement.defaultPlaybackRate</code></strong> property indicates the default playback rate for the media.</p>
+The **`HTMLMediaElement.defaultPlaybackRate`** property indicates the default playback rate for the media.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>dSpeed</em> = <em>video</em>.defaultPlaybackRate;
-<em>audio</em>.defaultPlaybackRate = 1.0;
-</pre>
+```js
+var dSpeed = video.defaultPlaybackRate;
+audio.defaultPlaybackRate = 1.0;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double. 1.0 is "normal speed," values lower than 1.0 make the media play slower than normal, higher values make it play faster. The value 0.0 is invalid and throws a <code>NOT_SUPPORTED_ERR</code> exception.</p>
+A double. 1.0 is "normal speed," values lower than 1.0 make the media play slower than normal, higher values make it play faster. The value 0.0 is invalid and throws a `NOT_SUPPORTED_ERR` exception.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.defaultPlaybackRate); // 1
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

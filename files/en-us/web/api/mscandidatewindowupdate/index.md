@@ -4,63 +4,59 @@ slug: Web/API/MSCandidateWindowUpdate
 tags:
   - MSCandidateWindowUpdate
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>MSCandidateWindowUpdate</strong></code> fires after the Input Method Editor (IME) candidate window has been identified as needing to change size, but before any visual updates have rendered.</p>
+**`MSCandidateWindowUpdate`** fires after the Input Method Editor (IME) candidate window has been identified as needing to change size, but before any visual updates have rendered.
 
-<p>This proprietary method is specific to Internet Explorer.</p>
+This proprietary method is specific to Internet Explorer.
 
-<h2 id="General_info">General info</h2>
+## General info
 
-<dl>
- <dt>Synchronous</dt>
- <dd>No</dd>
- <dt>Bubbles</dt>
- <dd>No</dd>
- <dt>Cancelable</dt>
- <dd>No</dd>
-</dl>
+- Synchronous
+  - : No
+- Bubbles
+  - : No
+- Cancelable
+  - : No
 
-<h3 id="Note">Note</h3>
+### Note
 
-<p>Windows 8.1 and Windows 7 IMEs for certain languages on Internet Explorer for the desktop might not support this event. On Internet Explorer in the new Windows UI, this event is supported in Windows 8.1 IMEs of all languages.</p>
+Windows 8.1 and Windows 7 IMEs for certain languages on Internet Explorer for the desktop might not support this event. On Internet Explorer in the new Windows UI, this event is supported in Windows 8.1 IMEs of all languages.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Event Property</th>
-   <td>object.oncandidatewindowupdate = handler;</td>
-  </tr>
-  <tr>
-   <th scope="row">addEventListener Method</th>
-   <td>object.addEventListener("MSCandidateWindowUpdate", handler, useCapture)</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Event Property</th>
+      <td>object.oncandidatewindowupdate = handler;</td>
+    </tr>
+    <tr>
+      <th scope="row">addEventListener Method</th>
+      <td>
+        object.addEventListener("MSCandidateWindowUpdate", handler, useCapture)
+      </td>
+    </tr>
+  </tbody>
 </table>
 
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+**pEvtObj** \[in]
 
-<p><strong>pEvtObj</strong> [in]</p>
+Type: _IHTMLEventObj_
 
-<p>Type: <em>IHTMLEventObj</em></p>
+Pointer to an `IHTMLEventObj `interface for the current event.
 
-<p>Pointer to an <code>IHTMLEventObj </code>interface for the current event.</p>
+TAn IME candidate window may be identified as needing to change size for any of the following reasons:
 
-<p>TAn IME candidate window may be identified as needing to change size for any of the following reasons:</p>
+- As a result of displaying new / changed alternatives or predictions
 
-<ul>
-<li>As a result of displaying new / changed alternatives or predictions</li>
-</ul>
-<p>Web applications need only register for this event once per element (the handler will remain valid for the lifetime of the element).</p>
+Web applications need only register for this event once per element (the handler will remain valid for the lifetime of the element).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
- <li><a href="/en-US/docs/Mozilla/IME_handling_guide">IME handling guide for Gecko</a></li>
-</ul>
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)
+- [IME handling guide for Gecko](/en-US/docs/Mozilla/IME_handling_guide)

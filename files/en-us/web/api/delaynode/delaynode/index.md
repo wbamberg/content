@@ -2,63 +2,63 @@
 title: DelayNode()
 slug: Web/API/DelayNode/DelayNode
 tags:
-- API
-- Audio
-- Constructor
-- DelayNode
-- Media
-- Reference
-- Web Audio API
+  - API
+  - Audio
+  - Constructor
+  - DelayNode
+  - Media
+  - Reference
+  - Web Audio API
 browser-compat: api.DelayNode.DelayNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>DelayNode()</code></strong>
-    constructor of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>
-    creates a new {{domxref("DelayNode")}} object with a delay-line; an AudioNode
-    audio-processing module that causes a delay between the arrival of an input data, and
-    its propagation to the output.</p>
+The **`DelayNode()`**
+constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+creates a new {{domxref("DelayNode")}} object with a delay-line; an AudioNode
+audio-processing module that causes a delay between the arrival of an input data, and
+its propagation to the output.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>delayNode</var> = new DelayNode(<var>context</var>);
-var <var>delayNode</var> = new DelayNode(<var>context</var>, <var>options</var>);</pre>
+```js
+var delayNode = new DelayNode(context);
+var delayNode = new DelayNode(context, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary.</em></p>
+_Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary._
 
-<dl>
-  <dt><em>context</em></dt>
-  <dd>A reference to an {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}}.
-  </dd>
-  <dt><em>options</em> {{optional_inline}}</dt>
-  <dd>An object specifying the delay node options. Can contain the following members:
-    <ul>
-      <li><code>delayTime</code>: The initial delay time for the node, in seconds. The
-        default is <code>0</code>.</li>
-      <li><code>maxDelayTime</code>: The maximum delay time for the node, in seconds.
-        Defaults to <code>1</code>.</li>
-    </ul>
-  </dd>
-</dl>
+- _context_
+  - : A reference to an {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}}.
+- _options_ {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object specifying the delay node options. Can contain the following members:
 
-<p>A new {{domxref("DelayNode")}} object instance.</p>
+    - `delayTime`: The initial delay time for the node, in seconds. The
+      default is `0`.
+    - `maxDelayTime`: The maximum delay time for the node, in seconds.
+      Defaults to `1`.
 
-<h2 id="Example">Example</h2>
+### Return value
 
-<pre class="brush: js">const audioCtx = new AudioContext();
+A new {{domxref("DelayNode")}} object instance.
+
+## Example
+
+```js
+const audioCtx = new AudioContext();
 const delayNode = new DelayNode(audioCtx, {
   delayTime: 0.5,
   maxDelayTime: 2,
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

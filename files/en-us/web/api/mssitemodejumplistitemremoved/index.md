@@ -2,58 +2,53 @@
 title: mssitemodejumplistitemremoved event
 slug: Web/API/mssitemodejumplistitemremoved
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>mssitemodejumplistitemremoved</strong></code> event occurs when <code>msSiteModeShowJumpList</code> is called and an item has been removed from a <em>Jump List</em> by the user.</p>
+The **`mssitemodejumplistitemremoved`** event occurs when `msSiteModeShowJumpList` is called and an item has been removed from a _Jump List_ by the user.
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Event Property</th>
-   <td>object.oncandidatewindowhide = handler;</td>
-  </tr>
-  <tr>
-   <th scope="row">addEventListener Method</th>
-   <td>object.addEventListener("mssitemodejumplistitemremoved", handler, useCapture)</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Event Property</th>
+      <td>object.oncandidatewindowhide = handler;</td>
+    </tr>
+    <tr>
+      <th scope="row">addEventListener Method</th>
+      <td>
+        object.addEventListener("mssitemodejumplistitemremoved", handler,
+        useCapture)
+      </td>
+    </tr>
+  </tbody>
 </table>
 
+## General info
 
+- Synchronous
+  - : No
+- Bubbles
+  - : No
+- Cancelable
+  - : No
 
-<h2 id="General_info">General info</h2>
+### Note
 
-<dl>
- <dt>Synchronous</dt>
- <dd>No</dd>
- <dt>Bubbles</dt>
- <dd>No</dd>
- <dt>Cancelable</dt>
- <dd>No</dd>
-</dl>
+This event is raised once for every item that has been removed since the last time `msSiteModeShowJumpList `was called. This event is not triggered if `msSiteModeClearJumpList `has been called.
 
-<h3 id="Note">Note</h3>
+### Parameters
 
-<p>This event is raised once for every item that has been removed since the last time <code>msSiteModeShowJumpList </code>was called. This event is not triggered if <code>msSiteModeClearJumpList </code>has been called.</p>
+**pEvtObj** \[in]
 
-<h3 id="Parameters">Parameters</h3>
+Type: _IHTMLEventObj_
 
-<p><strong>pEvtObj</strong> [in]</p>
+Pointer to an IHTMLEventObj interface for the current event.
 
-<p>Type: <em>IHTMLEventObj</em></p>
+## See also
 
-<p>Pointer to an IHTMLEventObj interface for the current event.</p>
-
-
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

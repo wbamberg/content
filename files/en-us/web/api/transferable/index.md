@@ -9,36 +9,32 @@ tags:
   - Web Workers
 browser-compat: api.Transferable
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Transferable</strong></code> interface represents an object that can be transfered between different execution contexts, like the main thread and Web workers.</p>
+The **`Transferable`** interface represents an object that can be transfered between different execution contexts, like the main thread and Web workers.
 
-<p>This is an abstract interface and there is no object of this type. This interface does not define any method or property; it is merely a tag indicating objects that can be used in specific conditions, such as being transfered to a {{domxref("Worker")}} using the {{domxref("Worker.postMessage()")}} method.</p>
+This is an abstract interface and there is no object of this type. This interface does not define any method or property; it is merely a tag indicating objects that can be used in specific conditions, such as being transfered to a {{domxref("Worker")}} using the {{domxref("Worker.postMessage()")}} method.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>Transferable</code> interface technically no longer exists. The <em>functionality</em> of <code>Transferable</code> objects still exists, however, but is implemented at a more fundamental level (technically speaking, using the <code>[Transferable]</code> {{Glossary("WebIDL")}} extended attribute).</p>
-</div>
+> **Note:** The `Transferable` interface technically no longer exists. The _functionality_ of `Transferable` objects still exists, however, but is implemented at a more fundamental level (technically speaking, using the `[Transferable]` {{Glossary("WebIDL")}} extended attribute).
 
-<p>The {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}}, {{domxref("ImageBitmap")}} and {{domxref("OffscreenCanvas")}} types implement this interface.</p>
+The {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}}, {{domxref("ImageBitmap")}} and {{domxref("OffscreenCanvas")}} types implement this interface.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>Transferable</code> interface does not implement or inherit specific properties.</em></p>
+_The `Transferable` interface does not implement or inherit specific properties._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>Transferable</code> interface does not implement or inherit specific properties.</em></p>
+_The `Transferable` interface does not implement or inherit specific properties._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Interfaces implementing it: {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}}, {{domxref("ImageBitmap")}}.</li>
-</ul>
+- Interfaces implementing it: {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}}, {{domxref("ImageBitmap")}}.

@@ -10,48 +10,49 @@ tags:
   - Web Audio API
 browser-compat: api.MediaElementAudioSourceNode.MediaElementAudioSourceNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>MediaElementAudioSourceNode()</strong></code> constructor creates a new {{domxref("MediaElementAudioSourceNode")}} object instance.</p>
+The **`MediaElementAudioSourceNode()`** constructor creates a new {{domxref("MediaElementAudioSourceNode")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myAudioSource = new MediaElementAudioSourceNode(<em>context</em>, <em>options</em>);</pre>
+```js
+var myAudioSource = new MediaElementAudioSourceNode(context, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
+_Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary_.
 
-<dl>
- <dt><em>context</em></dt>
- <dd>An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.</dd>
- <dt><em>options</em></dt>
- <dd>A <code>MediaElementAudioSourceOptions</code> dictionary object defining the properties you want the <code>MediaElementAudioSourceNode</code> to have:
- <ul>
-  <li><code>mediaElement</code>: An {{domxref("HTMLMediaElement")}} that will be used as the source for the audio.</li>
- </ul>
- </dd>
-</dl>
+- _context_
+  - : An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.
+- _options_
 
-<h3 id="Return_value">Return value</h3>
+  - : A `MediaElementAudioSourceOptions` dictionary object defining the properties you want the `MediaElementAudioSourceNode` to have:
 
-<p>A new {{domxref("MediaElementAudioSourceNode")}} object instance.</p>
+    - `mediaElement`: An {{domxref("HTMLMediaElement")}} that will be used as the source for the audio.
 
-<h2 id="Example">Example</h2>
+### Return value
 
-<pre class="brush: js">var ac = new AudioContext();
+A new {{domxref("MediaElementAudioSourceNode")}} object instance.
+
+## Example
+
+```js
+var ac = new AudioContext();
 var mediaElement = document.createElement('audio');
 
 var options = {
   mediaElement : mediaElement
 }
 
-var myAudioSource = new MediaElementAudioSourceNode(ac, options);</pre>
+var myAudioSource = new MediaElementAudioSourceNode(ac, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

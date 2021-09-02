@@ -2,42 +2,42 @@
 title: CSSPrimitiveValue.setFloatValue()
 slug: Web/API/CSSPrimitiveValue/setFloatValue
 tags:
-- API
-- CSSPrimitiveValue
-- Method
-- NeedsExample
-- setFloatValue
-- Deprecated
+  - API
+  - CSSPrimitiveValue
+  - Method
+  - NeedsExample
+  - setFloatValue
+  - Deprecated
 browser-compat: api.CSSPrimitiveValue.setFloatValue
 ---
-<div>{{APIRef("CSSOM")}}{{deprecated_header}}</div>
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
-<p>The <code><strong>setFloatValue()</strong></code> method of the
-  {{domxref("CSSPrimitiveValue")}} interface is used to set a float value. If the property
-  attached to this value can't accept the specified unit or the float value, the value
-  will be unchanged and a {{domxref("DOMException")}} will be raised.</p>
+The **`setFloatValue()`** method of the
+{{domxref("CSSPrimitiveValue")}} interface is used to set a float value. If the property
+attached to this value can't accept the specified unit or the float value, the value
+will be unchanged and a {{domxref("DOMException")}} will be raised.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
-  not implement it.</p>
-  <p>To achieve your purpose, you can use:</p>
-  <ul>
-    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
-    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
-  </ul>
-</div>
+> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> not implement it.
+>
+> To achieve your purpose, you can use:
+>
+> - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
+> - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>cssPrimitiveValue</var>.setFloatValue(<var>unitType</var>, <var>floatValue</var>);</pre>
+```js
+cssPrimitiveValue.setFloatValue(unitType, floatValue);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>unitType</dt>
-  <dd>An <code>unsigned short</code> representing the code for the unit type, in which the
+- unitType
+
+  - : An `unsigned short` representing the code for the unit type, in which the
     value should be returned. Valid values are:
+
     <table class="standard-table">
       <tbody>
         <tr>
@@ -46,7 +46,9 @@ browser-compat: api.CSSPrimitiveValue.setFloatValue
         </tr>
         <tr>
           <td><code>CSS_CM</code></td>
-          <td>The value is a {{cssxref("&lt;length&gt;")}} in centimeters.</td>
+          <td>
+            The value is a {{cssxref("&lt;length&gt;")}} in centimeters.
+          </td>
         </tr>
         <tr>
           <td><code>CSS_DEG</code></td>
@@ -54,15 +56,22 @@ browser-compat: api.CSSPrimitiveValue.setFloatValue
         </tr>
         <tr>
           <td><code>CSS_DIMENSION</code></td>
-          <td>The value is a {{cssxref("&lt;number&gt;")}} with an unknown dimension.</td>
+          <td>
+            The value is a {{cssxref("&lt;number&gt;")}} with an unknown
+            dimension.
+          </td>
         </tr>
         <tr>
           <td><code>CSS_EMS</code></td>
-          <td>The value is a {{cssxref("&lt;length&gt;")}} in em units.</td>
+          <td>
+            The value is a {{cssxref("&lt;length&gt;")}} in em units.
+          </td>
         </tr>
         <tr>
           <td><code>CSS_EXS</code></td>
-          <td>The value is a {{cssxref("&lt;length&gt;")}} in ex units.</td>
+          <td>
+            The value is a {{cssxref("&lt;length&gt;")}} in ex units.
+          </td>
         </tr>
         <tr>
           <td><code>CSS_GRAD</code></td>
@@ -70,24 +79,35 @@ browser-compat: api.CSSPrimitiveValue.setFloatValue
         </tr>
         <tr>
           <td><code>CSS_HZ</code></td>
-          <td>The value is a {{cssxref("&lt;frequency&gt;")}} in Hertz. The value can be
-            obtained by using the getFloatValue method.</td>
+          <td>
+            The value is a {{cssxref("&lt;frequency&gt;")}} in Hertz.
+            The value can be obtained by using the getFloatValue method.
+          </td>
         </tr>
         <tr>
           <td><code>CSS_IN</code></td>
-          <td>The value is a {{cssxref("&lt;length&gt;")}} in inches.</td>
+          <td>
+            The value is a {{cssxref("&lt;length&gt;")}} in inches.
+          </td>
         </tr>
         <tr>
           <td><code>CSS_KHZ</code></td>
-          <td>The value is a {{cssxref("&lt;frequency&gt;")}} in Kilohertz.</td>
+          <td>
+            The value is a {{cssxref("&lt;frequency&gt;")}} in
+            Kilohertz.
+          </td>
         </tr>
         <tr>
           <td><code>CSS_MM</code></td>
-          <td>The value is a {{cssxref("&lt;length&gt;")}} in millimeters.</td>
+          <td>
+            The value is a {{cssxref("&lt;length&gt;")}} in millimeters.
+          </td>
         </tr>
         <tr>
           <td><code>CSS_MS</code></td>
-          <td>The value is a {{cssxref("&lt;time&gt;")}} in milliseconds.</td>
+          <td>
+            The value is a {{cssxref("&lt;time&gt;")}} in milliseconds.
+          </td>
         </tr>
         <tr>
           <td><code>CSS_NUMBER</code></td>
@@ -103,11 +123,15 @@ browser-compat: api.CSSPrimitiveValue.setFloatValue
         </tr>
         <tr>
           <td><code>CSS_PT</code></td>
-          <td>The value is a {{cssxref("&lt;length&gt;")}} in points.</td>
+          <td>
+            The value is a {{cssxref("&lt;length&gt;")}} in points.
+          </td>
         </tr>
         <tr>
           <td><code>CSS_PX</code></td>
-          <td>The value is a {{cssxref("&lt;length&gt;")}} in pixels.</td>
+          <td>
+            The value is a {{cssxref("&lt;length&gt;")}} in pixels.
+          </td>
         </tr>
         <tr>
           <td><code>CSS_RAD</code></td>
@@ -119,41 +143,27 @@ browser-compat: api.CSSPrimitiveValue.setFloatValue
         </tr>
       </tbody>
     </table>
-  </dd>
-  <dt>floatValue</dt>
-  <dd>A <code>float</code> representing the new float value.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+- floatValue
+  - : A `float` representing the new float value.
 
-<p>Void.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+Void.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col"><strong>Type</strong></th>
-      <th scope="col"><strong>Description</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>DOMException</code></td>
-      <td>An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't contain a
-        float value or if the string value can't be converted into the specified unit.<br>
-        An NO_MODIFICATION_ALLOWED_ERR is raised if this property is read-only.</td>
-    </tr>
-  </tbody>
-</table>
+### Exceptions
 
-<h2 id="Specifications">Specifications</h2>
+| **Type**       | **Description**                                                                                                                                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a float value or if the string value can't be converted into the specified unit. An NO_MODIFICATION_ALLOWED_ERR is raised if this property is read-only. |
 
-<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
-  standardization effort since then.</p>
+## Specifications
 
-<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+standardization effort since then.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.
 
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}
