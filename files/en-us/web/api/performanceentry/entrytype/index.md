@@ -2,99 +2,52 @@
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
 tags:
-- API
-- Performance Timeline API
-- PerformanceEntry
-- Property
-- Reference
-- Web Performance
+  - API
+  - Performance Timeline API
+  - PerformanceEntry
+  - Property
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceEntry.entryType
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>entryType</code></strong> property returns
-    a {{domxref("DOMString")}} representing the type of performance metric such as, for
-    example, "<code>mark</code>". This property is read only.</p>
+The **`entryType`** property returns
+a {{domxref("DOMString")}} representing the type of performance metric such as, for
+example, "`mark`". This property is read only.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>type</em> = <em>entry</em>.entryType;</pre>
+```js
+var type = entry.entryType;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>The return value depends on the subtype of the <code>PerformanceEntry</code> object and
-  affects the value of the {{domxref('PerformanceEntry.name')}} property as shown by the
-  table below.</p>
+The return value depends on the subtype of the `PerformanceEntry` object and
+affects the value of the {{domxref('PerformanceEntry.name')}} property as shown by the
+table below.
 
-<h3 id="Performance_entry_type_names">Performance entry type names</h3>
+### Performance entry type names
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Value</th>
-      <th scope="col">Subtype</th>
-      <th scope="col">Type of name property</th>
-      <th scope="col">Description of name property</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>element</code></td>
-      <td>{{domxref('PerformanceElementTiming')}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>Reports load time of elements.</td>
-    </tr>
-    <tr>
-      <td><code>frame</code>, <code>navigation</code></td>
-      <td>{{domxref('PerformanceFrameTiming')}},
-        {{domxref('PerformanceNavigationTiming')}}</td>
-      <td>{{domxref("URL")}}</td>
-      <td>The document's address.</td>
-    </tr>
-    <tr>
-      <td><code>resource</code></td>
-      <td>{{domxref('PerformanceResourceTiming')}}</td>
-      <td>{{domxref("URL")}}</td>
-      <td>The resolved URL of the requested resource. This value doesn't change even if
-        the request is redirected.</td>
-    </tr>
-    <tr>
-      <td><code>mark</code></td>
-      <td>{{domxref('PerformanceMark')}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>The name used when the mark was created by calling
-        {{domxref("Performance.mark","performance.mark()")}}.</td>
-    </tr>
-    <tr>
-      <td><code>measure</code></td>
-      <td>{{domxref('PerformanceMeasure')}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>name used when the measure was created by calling
-        {{domxref("Performance.measure","performance.measure()")}}.</td>
-    </tr>
-    <tr>
-      <td><code>paint</code></td>
-      <td>{{domxref('PerformancePaintTiming')}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>Either <code>'first-paint'</code> or <code>'first-contentful-paint'</code>.</td>
-    </tr>
-    <tr>
-      <td><code>longtask</code></td>
-      <td>{{domxref('PerformanceLongTaskTiming')}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>reports instances of long tasks</td>
-    </tr>
-  </tbody>
-</table>
+| Value                 | Subtype                                                                                                    | Type of name property            | Description of name property                                                                                                    |
+| --------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `element`             | {{domxref('PerformanceElementTiming')}}                                                       | {{domxref("DOMString")}} | Reports load time of elements.                                                                                                  |
+| `frame`, `navigation` | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | {{domxref("URL")}}         | The document's address.                                                                                                         |
+| `resource`            | {{domxref('PerformanceResourceTiming')}}                                                       | {{domxref("URL")}}         | The resolved URL of the requested resource. This value doesn't change even if the request is redirected.                        |
+| `mark`                | {{domxref('PerformanceMark')}}                                                                   | {{domxref("DOMString")}} | The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.        |
+| `measure`             | {{domxref('PerformanceMeasure')}}                                                               | {{domxref("DOMString")}} | name used when the measure was created by calling {{domxref("Performance.measure","performance.measure()")}}. |
+| `paint`               | {{domxref('PerformancePaintTiming')}}                                                           | {{domxref("DOMString")}} | Either `'first-paint'` or `'first-contentful-paint'`.                                                                           |
+| `longtask`            | {{domxref('PerformanceLongTaskTiming')}}                                                       | {{domxref("DOMString")}} | reports instances of long tasks                                                                                                 |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>entryType</code> property.</p>
+The following example shows the use of the `entryType` property.
 
-<pre class="brush: js">function run_PerformanceEntry() {
+```js
+function run_PerformanceEntry() {
 
   // check for feature support before continuing
   if (performance.mark === undefined) {
@@ -107,18 +60,18 @@ browser-compat: api.PerformanceEntry.entryType
 
   // Check the entryType of all the "begin" entries
   var entriesNamedBegin = performance.getEntriesByName("begin");
-	for (var i=0; i &lt; entriesNamedBegin.length; i++) {
+	for (var i=0; i < entriesNamedBegin.length; i++) {
       var typeOfEntry = entriesNamedBegin[i].entryType;
       console.log("Entry is type: " + typeOfEntry);
   }
 
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

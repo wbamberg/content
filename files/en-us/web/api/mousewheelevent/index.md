@@ -9,54 +9,29 @@ tags:
   - Reference
 browser-compat: api.MouseWheelEvent
 ---
-<div>{{APIRef("DOM Events")}}{{ Non-standard_header() }}{{deprecated_header}}</div>
+{{APIRef("DOM Events")}}{{ Non-standard_header() }}{{deprecated_header}}
 
-<p>The <strong><code>MouseWheelEvent</code></strong> interface represents events that occur due to the user turning a mouse wheel.</p>
+The **`MouseWheelEvent`** interface represents events that occur due to the user turning a mouse wheel.
 
-<div class="warning">
-<p><strong>Warning:</strong> Do not use this interface for wheel events.</p>
+> **Warning:** Do not use this interface for wheel events.
+>
+> Like {{domxref("MouseScrollEvent")}}, this interface is non-standard and deprecated. It was used in non-Gecko browsers only. Instead use the standard _{{domxref("WheelEvent")}}._
 
-<p>Like {{domxref("MouseScrollEvent")}}, this interface is non-standard and deprecated. It was used in non-Gecko browsers only. Instead use the standard <em>{{domxref("WheelEvent")}}.</em></p>
-</div>
+## Properties
 
-<h2 id="Properties">Properties</h2>
+| Attribute                              | Type    | Description                                                                                          |
+| -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------- |
+| `wheelDelta` {{ReadOnlyInline}}  | `long`  | The distance in pixels (defined as so by MSDN, but the actual usage is different, see `mousewheel`). |
+| `wheelDeltaX` {{ReadOnlyInline}} | `long`? | The value along horizontal axis of `wheelDelta`.                                                     |
+| `wheelDeltaY` {{ReadOnlyInline}} | `long`? | The value along vertical axis of `wheelDelta`.                                                       |
 
-<table class="standard-table">
- <thead>
-   <tr>
-     <th>Attribute</th>
-     <th>Type</th>
-     <th>Description</th>
-   </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>wheelDelta</code> {{ReadOnlyInline}}</td>
-   <td><code>long</code></td>
-   <td>The distance in pixels (defined as so by MSDN, but the actual usage is different, see <code>mousewheel</code>).</td>
-  </tr>
-  <tr>
-   <td><code>wheelDeltaX</code> {{ReadOnlyInline}}</td>
-   <td><code>long</code>?</td>
-   <td>The value along horizontal axis of <code>wheelDelta</code>.</td>
-  </tr>
-  <tr>
-   <td><code>wheelDeltaY</code> {{ReadOnlyInline}}</td>
-   <td><code>long</code>?</td>
-   <td>The value along vertical axis of <code>wheelDelta</code>.</td>
-  </tr>
- </tbody>
-</table>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>An event type which is used by this event object: <code>mousewheel</code></li>
- <li>A standardized mouse wheel event object: {{ domxref("WheelEvent") }}</li>
- <li>Gecko's legacy mouse wheel event object: {{ domxref("MouseScrollEvent") }}</li>
- <li>The document in MSDN: {{ spec("https://msdn.microsoft.com/en-us/library/ie/ff974345%28v=vs.85%29.aspx","MouseWheelEvent object") }}</li>
-</ul>
+- An event type which is used by this event object: `mousewheel`
+- A standardized mouse wheel event object: {{ domxref("WheelEvent") }}
+- Gecko's legacy mouse wheel event object: {{ domxref("MouseScrollEvent") }}
+- The document in MSDN: {{ spec("https://msdn.microsoft.com/en-us/library/ie/ff974345%28v=vs.85%29.aspx","MouseWheelEvent object") }}

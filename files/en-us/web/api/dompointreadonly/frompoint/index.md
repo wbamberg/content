@@ -2,79 +2,79 @@
 title: DOMPointReadOnly.fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint
 tags:
-- API
-- Coordinates
-- DOM
-- DOMPointReadOnly
-- Geometry
-- Geometry Interfaces
-- Method
-- Point
-- Reference
-- Static Method
-- fromPoint
+  - API
+  - Coordinates
+  - DOM
+  - DOMPointReadOnly
+  - Geometry
+  - Geometry Interfaces
+  - Method
+  - Point
+  - Reference
+  - Static Method
+  - fromPoint
 browser-compat: api.DOMPointReadOnly.fromPoint
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The static <strong>{{domxref("DOMPointReadOnly")}}</strong>
-    method <code>fromPoint()</code> creates and returns a new
-    <code>DOMPointReadOnly</code> object given a source point.</p>
+The static **{{domxref("DOMPointReadOnly")}}**
+method `fromPoint()` creates and returns a new
+`DOMPointReadOnly` object given a source point.
 
-<p>The source point is
-  specified as a {{domxref("DOMPointInit")}}-compatible object, which includes both
-  {{domxref("DOMPoint")}} and {{domxref("DOMPointReadOnly")}}.</p>
+The source point is
+specified as a {{domxref("DOMPointInit")}}-compatible object, which includes both
+{{domxref("DOMPoint")}} and {{domxref("DOMPointReadOnly")}}.
 
-<p>You can also create a new <code>DOMPointReadOnly</code> object using the
-  {{domxref("DOMPointReadOnly.DOMPointReadOnly", "new DOMPointReadOnly()")}} constructor.
-</p>
+You can also create a new `DOMPointReadOnly` object using the
+{{domxref("DOMPointReadOnly.DOMPointReadOnly", "new DOMPointReadOnly()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <var>point</var> = DOMPointReadOnly.fromPoint(<var>sourcePoint</var>)</pre>
+```js
+const point = DOMPointReadOnly.fromPoint(sourcePoint)
+```
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<dl>
-  <dt><code><var>sourcePoint</var></code></dt>
-  <dd>A {{domxref("DOMPointInit")}}-compliant object, which includes both
+- `sourcePoint`
+  - : A {{domxref("DOMPointInit")}}-compliant object, which includes both
     {{domxref("DOMPoint")}} and {{domxref("DOMPointReadOnly")}}, from which to take the
-    values of the new point's properties.</dd>
-</dl>
+    values of the new point's properties.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("DOMPointReadOnly")}} object (which is identical to the source point).
-</p>
+A new {{domxref("DOMPointReadOnly")}} object (which is identical to the source point).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_2D_point">Creating a 2D point</h3>
+### Creating a 2D point
 
-<p>This sample creates a 2D point, specifying an inline object that includes the values to
-  use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y",
-  "y")}}. The <code>z</code> and <code>w</code> properties are allowed to keep their
-  default values (<code>0</code> and <code>1</code> respectively).</p>
+This sample creates a 2D point, specifying an inline object that includes the values to
+use for {{domxref("DOMPointReadOnly.x", "x")}} and {{domxref("DOMPointReadOnly.y",
+  "y")}}. The `z` and `w` properties are allowed to keep their
+default values (`0` and `1` respectively).
 
-<pre class="brush: js">const point2D = DOMPointReadOnly.fromPoint({x: 25, y: 25})</pre>
+```js
+const point2D = DOMPointReadOnly.fromPoint({x: 25, y: 25})
+```
 
-<h3 id="Creating_a_3D_point_using_an_existing_point">Creating a 3D point using an existing
-  point</h3>
+### Creating a 3D point using an existing point
 
-<p>This example creates a point, <code><var>origPoint</var></code>, of type
-  {{domxref("DOMPoint")}}, using {{domxref("DOMPoint.DOMPoint", "new DOMPoint()")}}. That
-  point is then used as the input for <code>fromPoint()</code> to create a new point,
-  <code><var>newPoint</var></code>.</p>
+This example creates a point, `origPoint`, of type
+{{domxref("DOMPoint")}}, using {{domxref("DOMPoint.DOMPoint", "new DOMPoint()")}}. That
+point is then used as the input for `fromPoint()` to create a new point,
+`newPoint`.
 
-<pre class="brush: js">const origPoint = new DOMPoint(25, 25, 100, 0.5)
+```js
+const origPoint = new DOMPoint(25, 25, 100, 0.5)
 
-const newPoint = DOMPointReadOnly.fromPoint(origPoint)</pre>
+const newPoint = DOMPointReadOnly.fromPoint(origPoint)
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

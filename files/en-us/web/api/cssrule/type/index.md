@@ -2,156 +2,61 @@
 title: CSSRule.type
 slug: Web/API/CSSRule/type
 tags:
-- API
-- CSSOM
-- Property
-- Reference
-- Read-only
-- Deprecated
+  - API
+  - CSSOM
+  - Property
+  - Reference
+  - Read-only
+  - Deprecated
 browser-compat: api.CSSRule.type
 ---
-<div>{{APIRef("CSSOM")}}{{Deprecated_header}}</div>
+{{APIRef("CSSOM")}}{{Deprecated_header}}
 
-<p>The read-only <strong><code>type</code></strong> property of the
-  {{domxref("CSSRule")}} interface is a deprecated property that returns an integer
-  indicating which type of rule the {{domxref("CSSRule")}} represents.</p>
+The read-only **`type`** property of the
+{{domxref("CSSRule")}} interface is a deprecated property that returns an integer
+indicating which type of rule the {{domxref("CSSRule")}} represents.
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var type = cssRule.type;
+```
 
-<pre class="brush: js">var <var>type</var> = <var>cssRule</var>.type;</pre>
+### Value
 
+An integer which will be one of the type constants listed in the table below.
 
-<h3>Value</h3>
-<p>An integer which will be one of the type constants listed in the table below.</p>
+| Type                               | Value | Rule-specific interface                                                       | Comments and examples                                                                                                                                                                                                                                     |
+| ---------------------------------- | ----- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CSSRule.STYLE_RULE`               | `1`   | {{domxref("CSSStyleRule")}}                                          | The most common kind of rule: `selector { prop1: val1; prop2: val2; }`                                                                                                                                                                                    |
+| `CSSRule.IMPORT_RULE`              | `3`   | {{domxref("CSSImportRule")}}                                          | An {{cssxref("@import")}} rule. (Until the documentation is completed, see the interface definition in the Mozilla source code: [nsIDOMCSSImportRule](http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9).) |
+| `CSSRule.MEDIA_RULE`               | `4`   | {{domxref("CSSMediaRule")}}                                          |                                                                                                                                                                                                                                                           |
+| `CSSRule.FONT_FACE_RULE`           | `5`   | {{domxref("CSSFontFaceRule")}}                                      |                                                                                                                                                                                                                                                           |
+| `CSSRule.PAGE_RULE`                | `6`   | {{domxref("CSSPageRule")}}                                          |                                                                                                                                                                                                                                                           |
+| `CSSRule.KEYFRAMES_RULE`           | `7`   | {{domxref("CSSKeyframesRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                           |
+| `CSSRule.KEYFRAME_RULE`            | `8`   | {{domxref("CSSKeyframeRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                           |
+| _Reserved for future use_          | `9`   |                                                                               | Should be used to define color profiles in the future                                                                                                                                                                                                     |
+| `CSSRule.NAMESPACE_RULE`           | `10`  | {{domxref("CSSNamespaceRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                           |
+| `CSSRule.COUNTER_STYLE_RULE`       | `11`  | {{domxref("CSSCounterStyleRule")}} {{experimental_inline}} |                                                                                                                                                                                                                                                           |
+| `CSSRule.SUPPORTS_RULE`            | `12`  | {{domxref("CSSSupportsRule")}}                                      |                                                                                                                                                                                                                                                           |
+| `CSSRule.DOCUMENT_RULE`            | `13`  | {{domxref("CSSDocumentRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                           |
+| `CSSRule.FONT_FEATURE_VALUES_RULE` | `14`  | {{domxref("CSSFontFeatureValuesRule")}}                          |                                                                                                                                                                                                                                                           |
+| `CSSRule.VIEWPORT_RULE`            | `15`  | {{domxref("CSSViewportRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                           |
+| `CSSRule.REGION_STYLE_RULE`        | `16`  | {{domxref("CSSRegionStyleRule")}} {{experimental_inline}} |                                                                                                                                                                                                                                                           |
+| `CSSRule.UNKNOWN_RULE`             | `0`   | {{domxref("CSSUnknownRule")}} {{deprecated_inline}}         |                                                                                                                                                                                                                                                           |
+| `CSSRule.CHARSET_RULE`             | `2`   | `CSSCharsetRule` {{deprecated_inline}}                                 | (Removed in most browsers.)                                                                                                                                                                                                                               |
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Type</th>
-      <th>Value</th>
-      <th>Rule-specific interface</th>
-      <th>Comments and examples</th>
-    </tr>
-    <tr>
-      <td><code>CSSRule.STYLE_RULE</code></td>
-      <td><code>1</code></td>
-      <td>{{domxref("CSSStyleRule")}}</td>
-      <td>The most common kind of rule:<br>
-        <code>selector { prop1: val1; prop2: val2; }</code>
-      </td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.IMPORT_RULE</code></td>
-      <td><code>3</code></td>
-      <td>{{domxref("CSSImportRule")}}</td>
-      <td>An {{cssxref("@import")}} rule. (Until the documentation is completed, see the
-        interface definition in the Mozilla source code: <a
-          href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9">nsIDOMCSSImportRule</a>.)
-      </td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.MEDIA_RULE</code></td>
-      <td><code>4</code></td>
-      <td>{{domxref("CSSMediaRule")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.FONT_FACE_RULE</code></td>
-      <td><code>5</code></td>
-      <td>{{domxref("CSSFontFaceRule")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.PAGE_RULE</code></td>
-      <td><code>6</code></td>
-      <td>{{domxref("CSSPageRule")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.KEYFRAMES_RULE</code></td>
-      <td><code>7</code></td>
-      <td>{{domxref("CSSKeyframesRule")}} {{experimental_inline}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.KEYFRAME_RULE</code></td>
-      <td><code>8</code></td>
-      <td>{{domxref("CSSKeyframeRule")}} {{experimental_inline}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><em>Reserved for future use</em></td>
-      <td><code>9</code></td>
-      <td></td>
-      <td>Should be used to define color profiles in the future</td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.NAMESPACE_RULE</code></td>
-      <td><code>10</code></td>
-      <td>{{domxref("CSSNamespaceRule")}} {{experimental_inline}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.COUNTER_STYLE_RULE</code></td>
-      <td><code>11</code></td>
-      <td>{{domxref("CSSCounterStyleRule")}} {{experimental_inline}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.SUPPORTS_RULE</code></td>
-      <td><code>12</code></td>
-      <td>{{domxref("CSSSupportsRule")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.DOCUMENT_RULE</code></td>
-      <td><code>13</code></td>
-      <td>{{domxref("CSSDocumentRule")}} {{experimental_inline}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.FONT_FEATURE_VALUES_RULE</code></td>
-      <td><code>14</code></td>
-      <td>{{domxref("CSSFontFeatureValuesRule")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.VIEWPORT_RULE</code></td>
-      <td><code>15</code></td>
-      <td>{{domxref("CSSViewportRule")}} {{experimental_inline}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.REGION_STYLE_RULE</code></td>
-      <td><code>16</code></td>
-      <td>{{domxref("CSSRegionStyleRule")}} {{experimental_inline}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.UNKNOWN_RULE</code></td>
-      <td><code>0</code></td>
-      <td>{{domxref("CSSUnknownRule")}} {{deprecated_inline}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CSSRule.CHARSET_RULE</code></td>
-      <td><code>2</code></td>
-      <td><code>CSSCharsetRule</code> {{deprecated_inline}}</td>
-      <td>(Removed in most browsers.)</td>
-    </tr>
-  </tbody>
-</table>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].type);
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].type);</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

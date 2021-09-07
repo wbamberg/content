@@ -2,53 +2,49 @@
 title: MouseEvent.which
 slug: Web/API/MouseEvent/which
 tags:
-- API
-- DOM Events
-- MouseEvent
-- Non-standard
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM Events
+  - MouseEvent
+  - Non-standard
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.MouseEvent.which
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>{{Non-standard_header}}</p>
+{{Non-standard_header}}
 
-<p>The <strong><code>MouseEvent.which</code></strong> read-only property indicates which
-  button was pressed on the mouse to trigger the event. The standard alternatives to this
-  property are {{ domxref("MouseEvent.button") }} and {{ domxref("MouseEvent.buttons") }}.
-</p>
+The **`MouseEvent.which`** read-only property indicates which
+button was pressed on the mouse to trigger the event. The standard alternatives to this
+property are {{ domxref("MouseEvent.button") }} and {{ domxref("MouseEvent.buttons") }}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>buttonPressed</em> = <em>instanceOfMouseEvent</em>.which
-</pre>
+```js
+var buttonPressed = instanceOfMouseEvent.which
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A number representing a given button:</p>
+A number representing a given button:
 
-<ul>
-  <li><code>0</code>: No button</li>
-  <li><code>1</code>: Left button</li>
-  <li><code>2</code>: Middle button (if present)</li>
-  <li><code>3</code>: Right button</li>
-</ul>
+- `0`: No button
+- `1`: Left button
+- `2`: Middle button (if present)
+- `3`: Right button
 
-<p>For a mouse configured for left-handed use, the button actions are reversed. In this
-  case, the values are read from right to left.</p>
+For a mouse configured for left-handed use, the button actions are reversed. In this
+case, the values are read from right to left.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This is not part of any specification.</p>
+This is not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}

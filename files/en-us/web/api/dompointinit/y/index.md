@@ -14,54 +14,53 @@ tags:
   - 'y'
 browser-compat: api.DOMPointInit.y
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong>{{domxref("DOMPointInit")}}</strong> dictionary's
-    <code><strong>y</strong></code> property is used to specify the <em>y</em>-coordinate
-    of a point in 2D or 3D space when either creating or serializing to JSON a
-    {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} object.</p>
+The **{{domxref("DOMPointInit")}}** dictionary's
+**`y`** property is used to specify the _y_-coordinate
+of a point in 2D or 3D space when either creating or serializing to JSON a
+{{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} object.
 
-<p>In general, the value of <code>y</code> increases to the right and decreases to the
-  left, becoming negative to the left of the origin. This may change if transforms have
-  been applied causing the axes' orientation to change.</p>
+In general, the value of `y` increases to the right and decreases to the
+left, becoming negative to the left of the origin. This may change if transforms have
+been applied causing the axes' orientation to change.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>DOMPointInit</em> = {
-  y: <em>yPos</em>
+```js
+var DOMPointInit = {
+  y: yPos
 };
 
-<em>DOMPointInit</em>.y = <em>yPos</em>;
+DOMPointInit.y = yPos;
 
-var <em>yPos</em> = <em>DOMPointInit</em>.y;</pre>
+var yPos = DOMPointInit.y;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the point's <em>y</em>-coordinate.
-  This value is <strong>unrestricted</strong>, meaning that it is allowed to be infinite
-  or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
-  "±Infinity")}}).</p>
+A double-precision floating-point value indicating the point's _y_-coordinate.
+This value is **unrestricted**, meaning that it is allowed to be infinite
+or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
+  "±Infinity")}}).
 
-<p>If this property is missing when the <code>DOMPointInit</code> object is passed into
-  <code>fromPoint()</code>, the value is assumed to be 0 by default.</p>
+If this property is missing when the `DOMPointInit` object is passed into
+`fromPoint()`, the value is assumed to be 0 by default.
 
-<p>There are two methods which use <code>DOMPointInit</code>:</p>
+There are two methods which use `DOMPointInit`:
 
-<ul>
-  <li>The static function {{domxref("DOMPointReadOnly.fromPoint()")}} takes an object that
-    complies with <code>DOMPointInit</code> as its sole input parameter, to specify the
-    coordinates and perspective value of the new point to be created. This method is, by
-    inheritance, also available as {{domxref("DOMPoint.fromPoint()")}}.</li>
-  <li>The {{domxref("DOMPointReadOnly.toJSON()")}} method returns a
-    <code>DOMPointInit</code> object that describes the same point as the original point.
-    By inheritance, this method is also available as {{domxref("DOMPointReadOnly.toJSON")}}.
-  </li>
-</ul>
+- The static function {{domxref("DOMPointReadOnly.fromPoint()")}} takes an object that
+  complies with `DOMPointInit` as its sole input parameter, to specify the
+  coordinates and perspective value of the new point to be created. This method is, by
+  inheritance, also available as {{domxref("DOMPoint.fromPoint()")}}.
+- The {{domxref("DOMPointReadOnly.toJSON()")}} method returns a
+  `DOMPointInit` object that describes the same point as the original point.
+  By inheritance, this method is also available as {{domxref("DOMPointReadOnly.toJSON")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

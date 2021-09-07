@@ -9,43 +9,40 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.states
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+{{DefaultAPISidebar("")}}
 
-<p>The <strong><code>states</code></strong> property of the {{domxref("ElementInternals")}} interface  </p>
+The **`states`** property of the {{domxref("ElementInternals")}} interface
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let astates = ElementInternals.states;
+```js
+let astates = ElementInternals.states;
 // Remove this one if the property is read only.
 ElementInternals.states = a;
-</pre>
+```
 
-<h3>Value</h3>
-<p></p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Contribute/Structures/Code_examples) for more information).
 
-<p>This text should be replaced with a brief description of what the example demonstrates.</p>
+This text should be replaced with a brief description of what the example demonstrates.
 
-<pre class="brush: js">
-my code block</pre>
+```js
+my code block
+```
 
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
+And/or include a list of links to useful code samples that live elsewhere:
 
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
+- x
+- y
+- z
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
-
+{{Compat}}

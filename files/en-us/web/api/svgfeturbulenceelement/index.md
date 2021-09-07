@@ -9,111 +9,69 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFETurbulenceElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGFETurbulenceElement</code></strong> interface corresponds to the {{SVGElement("feTurbulence")}} element.</p>
+The **`SVGFETurbulenceElement`** interface corresponds to the {{SVGElement("feTurbulence")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<h3 id="Turbulence_types">Turbulence types</h3>
+### Turbulence types
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Name</th>
-   <th>Value</th>
-   <th>Description</th>
-  </tr>
-  <tr>
-   <td><code>SVG_TURBULENCE_TYPE_UNKNOWN</code></td>
-   <td>0</td>
-   <td>The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.</td>
-  </tr>
-  <tr>
-   <td><code>SVG_TURBULENCE_TYPE_FRACTALNOISE</code></td>
-   <td>1</td>
-   <td>Corresponds to the <code>fractalNoise</code> value.</td>
-  </tr>
-  <tr>
-   <td><code>SVG_TURBULENCE_TYPE_TURBULENCE</code></td>
-   <td>2</td>
-   <td>Corresponds to <code>turbulence</code> value.</td>
-  </tr>
- </tbody>
-</table>
+| Name                               | Value | Description                                                                                                                                                  |
+| ---------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `SVG_TURBULENCE_TYPE_UNKNOWN`      | 0     | The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type. |
+| `SVG_TURBULENCE_TYPE_FRACTALNOISE` | 1     | Corresponds to the `fractalNoise` value.                                                                                                                     |
+| `SVG_TURBULENCE_TYPE_TURBULENCE`   | 2     | Corresponds to `turbulence` value.                                                                                                                           |
 
-<h3 id="Stitch_options">Stitch options</h3>
+### Stitch options
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Name</th>
-   <th>Value</th>
-   <th>Description</th>
-  </tr>
-  <tr>
-   <td><code>SVG_STITCHTYPE_UNKNOWN</code></td>
-   <td>0</td>
-   <td>The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.</td>
-  </tr>
-  <tr>
-   <td><code>SVG_STITCHTYPE_STITCH</code></td>
-   <td>1</td>
-   <td>Corresponds to the <code>stitch</code> value.</td>
-  </tr>
-  <tr>
-   <td><code>SVG_STITCHTYPE_NOSTITCH</code></td>
-   <td>2</td>
-   <td>Corresponds to <code>noStitch</code> value.</td>
-  </tr>
- </tbody>
-</table>
+| Name                      | Value | Description                                                                                                                                                  |
+| ------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `SVG_STITCHTYPE_UNKNOWN`  | 0     | The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type. |
+| `SVG_STITCHTYPE_STITCH`   | 1     | Corresponds to the `stitch` value.                                                                                                                           |
+| `SVG_STITCHTYPE_NOSTITCH` | 2     | Corresponds to `noStitch` value.                                                                                                                             |
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGFETurbulenceElement.baseFrequencyX")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the X component of the {{SVGAttr("baseFrequency")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFETurbulenceElement.baseFrequencyY")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the Y component of the {{SVGAttr("baseFrequency")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFETurbulenceElement.height")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFETurbulenceElement.numOctaves")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedInteger")}} corresponding to the {{SVGAttr("numOctaves")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFETurbulenceElement.result")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFETurbulenceElement.seed")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("seed")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFETurbulenceElement.stitchTiles")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("stitchTiles")}} attribute of the given element. It takes one of the <code>SVG_STITCHTYPE_*</code> constants defined on this interface.</dd>
- <dt>{{domxref("SVGFETurbulenceElement.type")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("type")}} attribute of the given element. It takes one of the <code>SVG_TURBULENCE_TYPE_*</code> constants defined on this interface.</dd>
- <dt>{{domxref("SVGFETurbulenceElement.width")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFETurbulenceElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFETurbulenceElement.y")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGFETurbulenceElement.baseFrequencyX")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the X component of the {{SVGAttr("baseFrequency")}} attribute of the given element.
+- {{domxref("SVGFETurbulenceElement.baseFrequencyY")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the Y component of the {{SVGAttr("baseFrequency")}} attribute of the given element.
+- {{domxref("SVGFETurbulenceElement.height")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
+- {{domxref("SVGFETurbulenceElement.numOctaves")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedInteger")}} corresponding to the {{SVGAttr("numOctaves")}} attribute of the given element.
+- {{domxref("SVGFETurbulenceElement.result")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
+- {{domxref("SVGFETurbulenceElement.seed")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("seed")}} attribute of the given element.
+- {{domxref("SVGFETurbulenceElement.stitchTiles")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("stitchTiles")}} attribute of the given element. It takes one of the `SVG_STITCHTYPE_*` constants defined on this interface.
+- {{domxref("SVGFETurbulenceElement.type")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("type")}} attribute of the given element. It takes one of the `SVG_TURBULENCE_TYPE_*` constants defined on this interface.
+- {{domxref("SVGFETurbulenceElement.width")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
+- {{domxref("SVGFETurbulenceElement.x")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
+- {{domxref("SVGFETurbulenceElement.y")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("feTurbulence")}}</li>
-</ul>
+- {{SVGElement("feTurbulence")}}

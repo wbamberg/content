@@ -12,47 +12,48 @@ tags:
   - Web Audio API
 browser-compat: api.ChannelSplitterNode.ChannelSplitterNode
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>ChannelSplitterNode()</strong></code> constructor of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new {{domxref("ChannelSplitterNode")}} object instance, representing a node that splits the input into a separate output for each of the source node's audio channels.</p>
+The **`ChannelSplitterNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("ChannelSplitterNode")}} object instance, representing a node that splits the input into a separate output for each of the source node's audio channels.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>splitter</em> = new ChannelSpitterNode(<em>context</em>, <em>options</em>);</pre>
+```js
+var splitter = new ChannelSpitterNode(context, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
+_Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary_.
 
-<dl>
- <dt><code>context</code></dt>
- <dd>A {{domxref("BaseAudioContext")}} representing the audio context you want the node to be associated with.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>A <code><a href="https://webaudio.github.io/web-audio-api/#idl-def-ChannelSplitterOptions">ChannelSplitterOptions</a></code> dictionary object defining the properties you want the <code>ChannelSplitterNode</code> to have (It also inherits the options defined in the <code><a href="https://webaudio.github.io/web-audio-api/#idl-def-AudioNodeOptions">AudioNodeOptions</a></code> dictionary):
- <ul>
-  <li><code>numberOfOutputs</code>: A number defining the number of inputs the {{domxref("ChannelSplitterNode")}} should have. If not specified, the default value used is 6.</li>
- </ul>
- </dd>
-</dl>
+- `context`
+  - : A {{domxref("BaseAudioContext")}} representing the audio context you want the node to be associated with.
+- `options` {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : A [`ChannelSplitterOptions`](https://webaudio.github.io/web-audio-api/#idl-def-ChannelSplitterOptions) dictionary object defining the properties you want the `ChannelSplitterNode` to have (It also inherits the options defined in the [`AudioNodeOptions`](https://webaudio.github.io/web-audio-api/#idl-def-AudioNodeOptions) dictionary):
 
-<p>A new {{domxref("ChannelSplitterNode")}} object instance.</p>
+    - `numberOfOutputs`: A number defining the number of inputs the {{domxref("ChannelSplitterNode")}} should have. If not specified, the default value used is 6.
 
-<h2 id="Example">Example</h2>
+### Return value
 
-<pre class="brush: js">var ac = new AudioContext();
+A new {{domxref("ChannelSplitterNode")}} object instance.
+
+## Example
+
+```js
+var ac = new AudioContext();
 
 var options = {
   numberOfOutputs : 2
 }
 
-var mySplitter = new ChannelSplitterNode(ac, options);</pre>
+var mySplitter = new ChannelSplitterNode(ac, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,54 +2,52 @@
 title: WaveShaperNode()
 slug: Web/API/WaveShaperNode/WaveShaperNode
 tags:
-- API
-- Audio
-- Constructor
-- Media
-- Reference
-- WaveShaperNode
-- Web Audio API
+  - API
+  - Audio
+  - Constructor
+  - Media
+  - Reference
+  - WaveShaperNode
+  - Web Audio API
 browser-compat: api.WaveShaperNode.WaveShaperNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>WaveShaperNode()</code></strong> constructor
-    of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
-    {{domxref("WaveShaperNode")}} object which is an {{domxref("AudioNode")}} that
-    represents a non-linear distorter.</p>
+The **`WaveShaperNode()`** constructor
+of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
+{{domxref("WaveShaperNode")}} object which is an {{domxref("AudioNode")}} that
+represents a non-linear distorter.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var waveShaperNode = new WaveShaperNode(context, options)</pre>
+```js
+var waveShaperNode = new WaveShaperNode(context, options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
+_Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary_.
 
-<dl>
-  <dt><em>context</em></dt>
-  <dd>A reference to an {{domxref("AudioContext")}}.</dd>
-  <dt><em>options</em> {{optional_inline}}</dt>
-  <dd>Options are as follows:
-    <ul>
-      <li><code>curve</code>: The shaping curve used for the waveshaping effect. The input
-        signal is nominally within the range [-1;1].</li>
-      <li><code>oversample</code>: Specifies what type of oversampling (if any) should be
-        used when applying the shaping curve. Valid values are '<code>none</code>',
-        '<code>2x</code>', or '<code>4x</code>'. The default is '<code>none</code>'.</li>
-    </ul>
-  </dd>
-</dl>
+- _context_
+  - : A reference to an {{domxref("AudioContext")}}.
+- _options_ {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : Options are as follows:
 
-<p>A new {{domxref("WaveShaperNode")}} object instance.</p>
+    - `curve`: The shaping curve used for the waveshaping effect. The input
+      signal is nominally within the range \[-1;1].
+    - `oversample`: Specifies what type of oversampling (if any) should be
+      used when applying the shaping curve. Valid values are '`none`',
+      '`2x`', or '`4x`'. The default is '`none`'.
 
-<h2 id="Specifications">Specifications</h2>
+### Return value
+
+A new {{domxref("WaveShaperNode")}} object instance.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

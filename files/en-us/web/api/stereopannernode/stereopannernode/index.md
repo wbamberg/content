@@ -2,57 +2,51 @@
 title: StereoPannerNode()
 slug: Web/API/StereoPannerNode/StereoPannerNode
 tags:
-- API
-- Audio
-- Constructor
-- Media
-- Reference
-- StereoPannerNode
-- Web Audio API
+  - API
+  - Audio
+  - Constructor
+  - Media
+  - Reference
+  - StereoPannerNode
+  - Web Audio API
 browser-compat: api.StereoPannerNode.StereoPannerNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>StereoPannerNode()</code></strong> constructor of the <a
-		href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
-	{{domxref("StereoPannerNode")}} object which is an {{domxref("AudioNode")}} that
-	represents a simple stereo panner node that can be used to pan an audio stream left or
-	right.</p>
+The **`StereoPannerNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
+{{domxref("StereoPannerNode")}} object which is an {{domxref("AudioNode")}} that
+represents a simple stereo panner node that can be used to pan an audio stream left or
+right.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var stereoPannerNode = StereoPannerNode(context, options)</pre>
+```js
+var stereoPannerNode = StereoPannerNode(context, options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
+_Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary_.
 
-<dl>
-	<dt><em>context</em></dt>
-	<dd>A reference to an {{domxref("AudioContext")}}.</dd>
-	<dt><em>options</em> {{optional_inline}}</dt>
-	<dd>Options are as follows:
-		<ul>
-			<li><code>pan</code>: A floating point number in the range [-1,1] indicating
-				the position of an {{domxref("AudioNode")}} in an output image. The value
-				-1 represents full left and 1 represents full right. The default value is
-				<code>0</code>.</li>
-		</ul>
-	</dd>
-</dl>
+- _context_
+  - : A reference to an {{domxref("AudioContext")}}.
+- _options_ {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : Options are as follows:
 
-<p>A new {{domxref("StereoPannerNode")}} object instance.</p>
+    - `pan`: A floating point number in the range \[-1,1] indicating
+      the position of an {{domxref("AudioNode")}} in an output image. The value
+      \-1 represents full left and 1 represents full right. The default value is
+      `0`.
 
-<h2 id="Specifications">Specifications</h2>
+### Return value
+
+A new {{domxref("StereoPannerNode")}} object instance.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-	<p>{{Compat}}</p>
-</div>
+{{Compat}}

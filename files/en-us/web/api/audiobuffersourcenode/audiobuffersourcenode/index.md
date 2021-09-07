@@ -2,82 +2,77 @@
 title: AudioBufferSourceNode()
 slug: Web/API/AudioBufferSourceNode/AudioBufferSourceNode
 tags:
-- API
-- Audio
-- AudioBufferSourceNode
-- Constructor
-- Media
-- Reference
-- Web Audio API
+  - API
+  - Audio
+  - AudioBufferSourceNode
+  - Constructor
+  - Media
+  - Reference
+  - Web Audio API
 browser-compat: api.AudioBufferSourceNode.AudioBufferSourceNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>AudioBufferSourceNode()</code></strong>
-    constructor creates a new {{domxref("AudioBufferSourceNode")}} object instance.</p>
+The **`AudioBufferSourceNode()`**
+constructor creates a new {{domxref("AudioBufferSourceNode")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var audioBufferSourceNode = new AudioBufferSourceNode(context, options)</pre>
+```js
+var audioBufferSourceNode = new AudioBufferSourceNode(context, options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
+_Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary_.
 
-<dl>
-  <dt><em>context</em></dt>
-  <dd>A reference to an {{domxref("AudioContext")}}.</dd>
-  <dt><em>options</em> {{optional_inline}}</dt>
-  <dd>Options are as follows:
-    <ul>
-      <li><code>buffer</code>: An instance of {{domxref("AudioBuffer")}} to be played.
-      </li>
-      <li><code>detune</code>: A value in cents to modulate the speed of audio stream
-        rendering. Its nominal range is (-∞ to +∞). The default is <code>0</code>.</li>
-      <li><code>loop</code>: A boolean indicating whether the audio should play in a loop.
-        The default is <code>false</code>. If the loop is dynamically modified during
-        playback, the new value will take effect on the next processing block of audio.
-      </li>
-      <li><code>loopEnd</code>: An optional value, in seconds, where looping should end if
-        the loop attribute is <code>true</code>. The default is <code>0</code>. Its value
-        is exclusive to the content of the loop. The sample frames, comprising the loop,
-        run from the values <code>loopStart</code> to
-        <code>loopEnd</code>-(1/<code>sampleRate</code>). It's sensible to set this to a
-        value between 0 and the duration of the buffer. If <code>loopEnd</code> is less
-        than 0, looping will end at 0. If <code>loopEnd</code> is greater than the
-        duration of the buffer, looping will end at the end of the buffer. This attribute
-        is converted to an exact sample frame offset within the buffer, by multiplying by
-        the buffer's sample rate and rounding to the nearest integer value. Thus, its
-        behavior is independent of the value of the <code>playbackRate</code> parameter.
-      </li>
-    </ul>
+- _context_
+  - : A reference to an {{domxref("AudioContext")}}.
+- _options_ {{optional_inline}}
 
-    <ul>
-      <li><code>loopStart</code>: An optional value in seconds, where looping should begin
-        if the loop attribute is <code>true</code>. The default is <code>0</code>. It's
-        sensible to set this to a value between 0 and the duration of the buffer. If
-        <code>loopStart</code> is less than 0, looping will begin at 0. If
-        <code>loopStart</code> is greater than the duration of the buffer, looping will
-        begin at the end of the buffer. This attribute is converted to an exact sample
-        frame offset within the buffer, by multiplying by the buffer's sample rate and
-        rounding to the nearest integer value. Thus, its behavior is independent of the
-        value of the <code>playbackRate</code> parameter.</li>
-      <li><code>playbackRate</code>: The speed at which to render the audio stream. Its
-        default value is <code>1</code>. This parameter is k-rate. This is a compound
-        parameter with detune. Its nominal range is (-∞ to +∞).</li>
-    </ul>
-  </dd>
-</dl>
+  - : Options are as follows:
 
-<h3 id="Return_value">Return value</h3>
+    - `buffer`: An instance of {{domxref("AudioBuffer")}} to be played.
+    - `detune`: A value in cents to modulate the speed of audio stream
+      rendering. Its nominal range is (-∞ to +∞). The default is `0`.
+    - `loop`: A boolean indicating whether the audio should play in a loop.
+      The default is `false`. If the loop is dynamically modified during
+      playback, the new value will take effect on the next processing block of audio.
+    - `loopEnd`: An optional value, in seconds, where looping should end if
+      the loop attribute is `true`. The default is `0`. Its value
+      is exclusive to the content of the loop. The sample frames, comprising the loop,
+      run from the values `loopStart` to
+      `loopEnd`-(1/`sampleRate`). It's sensible to set this to a
+      value between 0 and the duration of the buffer. If `loopEnd` is less
+      than 0, looping will end at 0. If `loopEnd` is greater than the
+      duration of the buffer, looping will end at the end of the buffer. This attribute
+      is converted to an exact sample frame offset within the buffer, by multiplying by
+      the buffer's sample rate and rounding to the nearest integer value. Thus, its
+      behavior is independent of the value of the `playbackRate` parameter.
 
-<p>A new {{domxref("AudioBufferSourceNode")}} object instance.</p>
+    <!---->
 
-<h2 id="Specifications">Specifications</h2>
+    - `loopStart`: An optional value in seconds, where looping should begin
+      if the loop attribute is `true`. The default is `0`. It's
+      sensible to set this to a value between 0 and the duration of the buffer. If
+      `loopStart` is less than 0, looping will begin at 0. If
+      `loopStart` is greater than the duration of the buffer, looping will
+      begin at the end of the buffer. This attribute is converted to an exact sample
+      frame offset within the buffer, by multiplying by the buffer's sample rate and
+      rounding to the nearest integer value. Thus, its behavior is independent of the
+      value of the `playbackRate` parameter.
+    - `playbackRate`: The speed at which to render the audio stream. Its
+      default value is `1`. This parameter is k-rate. This is a compound
+      parameter with detune. Its nominal range is (-∞ to +∞).
+
+### Return value
+
+A new {{domxref("AudioBufferSourceNode")}} object instance.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,97 +9,55 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTextPathElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGTextPathElement</code></strong> interface corresponds to the {{SVGElement("textPath")}} element.</p>
+The **`SVGTextPathElement`** interface corresponds to the {{SVGElement("textPath")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<h3 id="Method_types">Method types</h3>
+### Method types
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Name</th>
-   <th>Value</th>
-   <th>Description</th>
-  </tr>
-  <tr>
-   <td><code>TEXTPATH_METHODTYPE_UNKNOWN</code></td>
-   <td>0</td>
-   <td>The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.</td>
-  </tr>
-  <tr>
-   <td><code>TEXTPATH_METHODTYPE_ALIGN</code></td>
-   <td>1</td>
-   <td>Corresponds to the value <code>align</code>.</td>
-  </tr>
-  <tr>
-   <td><code>TEXTPATH_METHODTYPE_STRETCH</code></td>
-   <td>2</td>
-   <td>Corresponds to the value <code>stretch</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Name                          | Value | Description                                                                                                                                                  |
+| ----------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `TEXTPATH_METHODTYPE_UNKNOWN` | 0     | The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type. |
+| `TEXTPATH_METHODTYPE_ALIGN`   | 1     | Corresponds to the value `align`.                                                                                                                            |
+| `TEXTPATH_METHODTYPE_STRETCH` | 2     | Corresponds to the value `stretch`.                                                                                                                          |
 
-<h3 id="Spacing_types">Spacing types</h3>
+### Spacing types
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Name</th>
-   <th>Value</th>
-   <th>Description</th>
-  </tr>
-  <tr>
-   <td><code>TEXTPATH_SPACINGTYPE_UNKNOWN</code></td>
-   <td>0</td>
-   <td>The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.</td>
-  </tr>
-  <tr>
-   <td><code>TEXTPATH_SPACINGTYPE_AUTO</code></td>
-   <td>1</td>
-   <td>Corresponds to the value <code>auto</code>.</td>
-  </tr>
-  <tr>
-   <td><code>TEXTPATH_SPACINGTYPE_EXACT</code></td>
-   <td>2</td>
-   <td>Corresponds to the value <code>exact</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Name                           | Value | Description                                                                                                                                                  |
+| ------------------------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `TEXTPATH_SPACINGTYPE_UNKNOWN` | 0     | The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type. |
+| `TEXTPATH_SPACINGTYPE_AUTO`    | 1     | Corresponds to the value `auto`.                                                                                                                             |
+| `TEXTPATH_SPACINGTYPE_EXACT`   | 2     | Corresponds to the value `exact`.                                                                                                                            |
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGTextContentElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGTextContentElement")}}._
 
-<dl>
- <dt>{{domxref("SVGTextPathElement.href")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the X component of the {{SVGAttr("startOffset")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGTextPathElement.method")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("method")}} attribute of the given element. It takes one of the <code>TEXTPATH_METHODTYPE_*</code> constants defined on this interface.</dd>
- <dt>{{domxref("SVGTextPathElement.spacing")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spacing")}} attribute of the given element. It takes one of the <code>TEXTPATH_SPACINGTYPE_*</code> constants defined on this interface.</dd>
-</dl>
+- {{domxref("SVGTextPathElement.href")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.
+- {{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the X component of the {{SVGAttr("startOffset")}} attribute of the given element.
+- {{domxref("SVGTextPathElement.method")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("method")}} attribute of the given element. It takes one of the `TEXTPATH_METHODTYPE_*` constants defined on this interface.
+- {{domxref("SVGTextPathElement.spacing")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("spacing")}} attribute of the given element. It takes one of the `TEXTPATH_SPACINGTYPE_*` constants defined on this interface.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGTextContentElement")}}.</em></p>
+_This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGTextContentElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("textPath")}}</li>
-</ul>
+- {{SVGElement("textPath")}}

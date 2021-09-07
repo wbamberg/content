@@ -2,50 +2,48 @@
 title: PaymentDetailsUpdate.error
 slug: Web/API/PaymentDetailsUpdate/error
 tags:
-- API
-- Error
-- Payment Request
-- Payment Request API
-- PaymentDetailsUpdate
-- Property
-- Reference
-- payment
+  - API
+  - Error
+  - Payment Request
+  - Payment Request API
+  - PaymentDetailsUpdate
+  - Property
+  - Reference
+  - payment
 browser-compat: api.PaymentDetailsUpdate.error
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The {{domxref("PaymentDetailsUpdate")}} dictionary's
-    <code><strong>error</strong></code> property is a human-readable
-    {{domxref("DOMString")}} which provides an error message to be displayed if the
-    specified information doesn't offer any valid shipping options.</p>
+The {{domxref("PaymentDetailsUpdate")}} dictionary's
+**`error`** property is a human-readable
+{{domxref("DOMString")}} which provides an error message to be displayed if the
+specified information doesn't offer any valid shipping options.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>errorString</em> = <em>paymentDetailsUpdate</em>.error;
+```js
+errorString = paymentDetailsUpdate.error;
 
-<em>paymentDetailsUpdate</em>.error = <em>errorString</em>;
-</pre>
+paymentDetailsUpdate.error = errorString;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} specifying the string to display to the user if the
-  information specified in the <code>PaymentDetailsUpdate</code> doesn't provide any valid
-  shipping options. This happens if both of the following are true:</p>
+A {{domxref("DOMString")}} specifying the string to display to the user if the
+information specified in the `PaymentDetailsUpdate` doesn't provide any valid
+shipping options. This happens if both of the following are true:
 
-<ul>
-  <li>The {{domxref("PaymentRequest")}} specifies using its
-    {{domxref("PaymentRequest.requestShipping", "requestShipping")}} property that
-    shipping information is required.</li>
-  <li>The {{domxref("PaymentDetailsUpdate")}} object specifies no valid shipping options
-    in its {{domxref("PaymentDetailsUpdate.shippingOptions", "shippingOptions")}} list.
-  </li>
-</ul>
+- The {{domxref("PaymentRequest")}} specifies using its
+  {{domxref("PaymentRequest.requestShipping", "requestShipping")}} property that
+  shipping information is required.
+- The {{domxref("PaymentDetailsUpdate")}} object specifies no valid shipping options
+  in its {{domxref("PaymentDetailsUpdate.shippingOptions", "shippingOptions")}} list.
 
-<p>This message can be used to explain to the user why they cannot submit their payment as
-  currently specified—whether that's because the selected products cannot be shipped to
-  their region or because their address is not served by any of the shipping companies you
-  use.</p>
+This message can be used to explain to the user why they cannot submit their payment as
+currently specified—whether that's because the selected products cannot be shipped to
+their region or because their address is not served by any of the shipping companies you
+use.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

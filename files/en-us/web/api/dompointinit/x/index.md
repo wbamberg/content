@@ -14,46 +14,47 @@ tags:
   - x
 browser-compat: api.DOMPointInit.x
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong>{{domxref("DOMPointInit")}}</strong> dictionary's
-    <code><strong>x</strong></code> property is used to specify the x component of a point
-    in 2D or 3D space when either creating or serializing a {{domxref("DOMPoint")}} or
-    {{domxref("DOMPointReadOnly")}}.</p>
+The **{{domxref("DOMPointInit")}}** dictionary's
+**`x`** property is used to specify the x component of a point
+in 2D or 3D space when either creating or serializing a {{domxref("DOMPoint")}} or
+{{domxref("DOMPointReadOnly")}}.
 
-<p>In general, positive values <code>x</code> mean to the right, and negative values of
-  <code>x</code> means to the left, assuming that transforms have not altered the
-  orientation of the axes.</p>
+In general, positive values `x` mean to the right, and negative values of
+`x` means to the left, assuming that transforms have not altered the
+orientation of the axes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>DOMPointInit</em> = {
-  x: <em>xPos</em>
+```js
+var DOMPointInit = {
+  x: xPos
 };
 
-<em>DOMPointInit</em>.x = <em>xPos</em>;
+DOMPointInit.x = xPos;
 
-var <em>xPos</em> = <em>DOMPointInit</em>.x;</pre>
+var xPos = DOMPointInit.x;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the point's x coordinate. This value
-  is <strong>unrestricted</strong>, meaning that it is allowed to be infinite or invalid
-  (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity", "±Infinity")}}).
-</p>
+A double-precision floating-point value indicating the point's x coordinate. This value
+is **unrestricted**, meaning that it is allowed to be infinite or invalid
+(that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity", "±Infinity")}}).
 
-<p>If this property is missing when the <code>DOMPointInit</code> object is passed into
-  <code>fromPoint()</code>, the value is assumed to be 0 by default.</p>
+If this property is missing when the `DOMPointInit` object is passed into
+`fromPoint()`, the value is assumed to be 0 by default.
 
-<p><code>DOMPointInit</code> is used as an input when calling either
-  {{domxref("DOMPointReadOnly.fromPoint()")}} or {{domxref("DOMPoint.fromPoint()")}}, and
-  is returned by the {{domxref("DOMPointReadOnly.toJSON()")}} and
-  {{domxref("DOMPointReadOnly.toJSON")}} methods.</p>
+`DOMPointInit` is used as an input when calling either
+{{domxref("DOMPointReadOnly.fromPoint()")}} or {{domxref("DOMPoint.fromPoint()")}}, and
+is returned by the {{domxref("DOMPointReadOnly.toJSON()")}} and
+{{domxref("DOMPointReadOnly.toJSON")}} methods.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

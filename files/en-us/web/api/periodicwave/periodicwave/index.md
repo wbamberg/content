@@ -10,50 +10,47 @@ tags:
   - Web Audio API
 browser-compat: api.PeriodicWave.PeriodicWave
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>PeriodicWave()</strong></code> constructor of the <a
-    href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
-  {{domxref("PeriodicWave")}} object instance.</p>
+The **`PeriodicWave()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
+{{domxref("PeriodicWave")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myWave</em> = new PeriodicWave(<em>context</em>, <em>options</em>);</pre>
+```js
+var myWave = new PeriodicWave(context, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
+_Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary_.
 
-<dl>
-  <dt><code>context</code></dt>
-  <dd>A {{domxref("BaseAudioContext")}} representing the audio context you want the node
-    to be associated with.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>A
-    <code><a href="https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveOptions">PeriodicWaveOptions</a></code>
-    dictionary object defining the properties you want the <code>PeriodicWave</code> to
-    have (It also inherits the options defined in the <a
-      href="https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveConstraints">PeriodicWaveConstraints</a>
+- `context`
+  - : A {{domxref("BaseAudioContext")}} representing the audio context you want the node
+    to be associated with.
+- `options` {{optional_inline}}
+
+  - : A
+    [`PeriodicWaveOptions`](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveOptions)
+    dictionary object defining the properties you want the `PeriodicWave` to
+    have (It also inherits the options defined in the [PeriodicWaveConstraints](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveConstraints)
     dictionary.):
-    <ul>
-      <li><code>real</code>: A {{jsxref("Float32Array")}} containing the cosine terms
-        that you want to use to form the wave (equivalent to the <code>real</code>
-        parameter of {{domxref("BaseAudioContext.createPeriodicWave")}}).</li>
-      <li><code>imag</code>: A {{jsxref("Float32Array")}} containing the sine terms that
-        you want to use to form the wave (equivalent to the <code>imag</code> parameter of
-        {{domxref("BaseAudioContext.createPeriodicWave")}}).</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `real`: A {{jsxref("Float32Array")}} containing the cosine terms
+      that you want to use to form the wave (equivalent to the `real`
+      parameter of {{domxref("BaseAudioContext.createPeriodicWave")}}).
+    - `imag`: A {{jsxref("Float32Array")}} containing the sine terms that
+      you want to use to form the wave (equivalent to the `imag` parameter of
+      {{domxref("BaseAudioContext.createPeriodicWave")}}).
 
-<p>A new {{domxref("PeriodicWave")}} object instance.</p>
+### Return value
 
-<h2 id="Example">Example</h2>
+A new {{domxref("PeriodicWave")}} object instance.
 
-<pre class="brush: js">var real = new Float32Array(2);
+## Example
+
+```js
+var real = new Float32Array(2);
 var imag = new Float32Array(2);
 var ac = new AudioContext();
 
@@ -68,12 +65,13 @@ var options = {
   disableNormalization : false
 }
 
-var wave = new PeriodicWave(ac, options);</pre>
+var wave = new PeriodicWave(ac, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,64 +11,58 @@ tags:
   - Web Audio API
 browser-compat: api.OscillatorNode.OscillatorNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>OscillatorNode()</code></strong> constructor of the <a
-		href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
-	{{domxref("OscillatorNode")}} object which is an {{domxref("AudioNode")}} that
-	represents a periodic waveform, like a sine wave, optionally setting the node's
-	properties' values to match values in a specified object.</p>
+The **`OscillatorNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
+{{domxref("OscillatorNode")}} object which is an {{domxref("AudioNode")}} that
+represents a periodic waveform, like a sine wave, optionally setting the node's
+properties' values to match values in a specified object.
 
-<p>If the default values of the properties are acceptable, you can optionally use the
-	{{domxref("BaseAudioContext.createOscillator()")}} factory method instead; see
-	<a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
+If the default values of the properties are acceptable, you can optionally use the
+{{domxref("BaseAudioContext.createOscillator()")}} factory method instead; see
+[Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <em>oscillatorNode</em> = new OscillatorNode(<em>context</em>, <em>options</em>)</pre>
+```js
+var oscillatorNode = new OscillatorNode(context, options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
+_Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary_.
 
-<dl>
-	<dt><code>context</code></dt>
-	<dd>A reference to an {{domxref("AudioContext")}}.</dd>
-	<dt><code>options</code> {{optional_inline}}</dt>
-	<dd>An object whose properties specify the initial values for the oscillator node's
-		properties. Any properties omitted from the object will take on the default value
-		as documented.
-		<dl>
-			<dt><code>type</code></dt>
-			<dd>The shape of the wave produced by the node. Valid values are
-				'<code>sine</code>', '<code>square</code>', '<code>sawtooth</code>',
-				'<code>triangle</code>' and '<code>custom</code>'. The default is
-				'<code>sine</code>'.</dd>
-			<dt><code>detune</code></dt>
-			<dd>A detuning value (in cents) which will offset
-				the <code>frequency</code> by the given amount. Its default is 0.</dd>
-			<dt><code>frequency</code></dt>
-			<dd>The frequency (in {{interwiki("wikipedia", "hertz")}}) of the periodic
-				waveform. Its default is 440.</dd>
-			<dt><code>periodicWave</code></dt>
-			<dd>An arbitrary period waveform described by a {{domxref("PeriodicWave")}}
-				object.</dd>
-		</dl>
-	</dd>
-</dl>
+- `context`
+  - : A reference to an {{domxref("AudioContext")}}.
+- `options` {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object whose properties specify the initial values for the oscillator node's
+    properties. Any properties omitted from the object will take on the default value
+    as documented.
 
-<p>A new {{domxref("OscillatorNode")}} object instance.</p>
+    - `type`
+      - : The shape of the wave produced by the node. Valid values are
+        '`sine`', '`square`', '`sawtooth`',
+        '`triangle`' and '`custom`'. The default is
+        '`sine`'.
+    - `detune`
+      - : A detuning value (in cents) which will offset
+        the `frequency` by the given amount. Its default is 0.
+    - `frequency`
+      - : The frequency (in {{interwiki("wikipedia", "hertz")}}) of the periodic
+        waveform. Its default is 440.
+    - `periodicWave`
+      - : An arbitrary period waveform described by a {{domxref("PeriodicWave")}}
+        object.
 
-<h2 id="Specifications">Specifications</h2>
+### Return value
+
+A new {{domxref("OscillatorNode")}} object instance.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-	<p>{{Compat}}</p>
-</div>
+{{Compat}}

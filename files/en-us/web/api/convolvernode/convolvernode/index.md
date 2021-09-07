@@ -2,73 +2,58 @@
 title: ConvolverNode()
 slug: Web/API/ConvolverNode/ConvolverNode
 tags:
-- API
-- Audio
-- Constructor
-- Convolver
-- Reference
-- Web Audio API
+  - API
+  - Audio
+  - Constructor
+  - Convolver
+  - Reference
+  - Web Audio API
 browser-compat: api.ConvolverNode.ConvolverNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>ConvolverNode()</code></strong> constructor
-    of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
-    {{domxref("ConvolverNode")}} object instance.</p>
+The **`ConvolverNode()`** constructor
+of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
+{{domxref("ConvolverNode")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var convolverNode = new ConvolverNode(context, options)</pre>
+```js
+var convolverNode = new ConvolverNode(context, options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
+_Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary_.
 
-<dl>
-  <dt><em>context</em></dt>
-  <dd>A reference to an {{domxref("AudioContext")}}.</dd>
-  <dt><em>options</em> {{optional_inline}}</dt>
-  <dd>Options are as follows:
-    <ul>
-      <li><code>audioBuffer</code>: A mono, stereo, or
-          4-channel <em>{{domxref("AudioBuffer")}}</em> containing the
-          (possibly multichannel) impulse response used by the <code>ConvolverNode</code>
-          to create the reverb effect.</li>
-      <li><code>disableNormalization</code>: A boolean value controlling
-          whether the impulse response from the buffer will be scaled by an equal-power
-          normalization, or not. The default is '<code>false</code>'.</li>
-    </ul>
-  </dd>
-</dl>
+- _context_
+  - : A reference to an {{domxref("AudioContext")}}.
+- _options_ {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : Options are as follows:
 
-<p>A new {{domxref("ConvolverNode")}} object instance.</p>
+    - `audioBuffer`: A mono, stereo, or
+      4-channel *{{domxref("AudioBuffer")}}* containing the
+      (possibly multichannel) impulse response used by the `ConvolverNode`
+      to create the reverb effect.
+    - `disableNormalization`: A boolean value controlling
+      whether the impulse response from the buffer will be scaled by an equal-power
+      normalization, or not. The default is '`false`'.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>NotSupportedError</code></td>
-      <td>The referenced {{domxref("AudioBuffer")}} does not have the correct number of
-        channels, or it has a different sample rate to the associated
-        {{domxref("AudioContext")}}.</td>
-    </tr>
-  </tbody>
-</table>
+A new {{domxref("ConvolverNode")}} object instance.
 
-<h2 id="Specifications">Specifications</h2>
+### Exceptions
+
+| Exception           | Explanation                                                                                                                                                                                 |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NotSupportedError` | The referenced {{domxref("AudioBuffer")}} does not have the correct number of channels, or it has a different sample rate to the associated {{domxref("AudioContext")}}. |
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

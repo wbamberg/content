@@ -8,34 +8,37 @@ tags:
   - Deprecated
 browser-compat: api.Document.queryCommandState
 ---
-<div>{{ApiRef("DOM")}}{{deprecated_header}}</div>
+{{ApiRef("DOM")}}{{deprecated_header}}
 
-<p>The <strong><code>queryCommandState()</code></strong> method will tell you if the current selection has a certain {{domxref("Document.execCommand()")}} command applied.</p>
+The **`queryCommandState()`** method will tell you if the current selection has a certain {{domxref("Document.execCommand()")}} command applied.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">queryCommandState(String <var>command</var>)
-</pre>
+```js
+queryCommandState(String command)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><code><var>command</var></code> is a command from {{domxref("Document.execCommand()")}}</p>
+`command` is a command from {{domxref("Document.execCommand()")}}
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>queryCommandState()</code> can return a boolean value or <code>null</code> if the state is unknown.</p>
+`queryCommandState()` can return a boolean value or `null` if the state is unknown.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div contenteditable="true"&gt;Select a part of this text!&lt;/div&gt;
-&lt;button onclick="makeBold();"&gt;Test the state of the 'bold' command&lt;/button&gt;
-</pre>
+```html
+<div contenteditable="true">Select a part of this text!</div>
+<button onclick="makeBold();">Test the state of the 'bold' command</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function makeBold() {
+```js
+function makeBold() {
   var state = document.queryCommandState("bold");
   switch (state) {
     case true:
@@ -49,25 +52,24 @@ browser-compat: api.Document.queryCommandState
       break;
   }
   document.execCommand('bold');
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
+This feature is not part of any current specification. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLElement.contentEditable")}}</li>
- <li>{{domxref("document.designMode")}}</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla">Rich-Text Editing in Mozilla</a></li>
- <li>Browser bugs related to <code>queryCommandState()</code>: <a href="https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate">Scribe's "Browser Inconsistencies" documentation</a></li>
-</ul>
+- {{domxref("HTMLElement.contentEditable")}}
+- {{domxref("document.designMode")}}
+- [Rich-Text Editing in Mozilla](/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla)
+- Browser bugs related to `queryCommandState()`: [Scribe's "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate)

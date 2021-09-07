@@ -2,76 +2,72 @@
 title: EffectTiming.duration
 slug: Web/API/EffectTiming/duration
 tags:
-- API
-- Animation
-- EffectTiming
-- Experimental
-- KeyframeEffect
-- Property
-- Reference
-- Web Animations
-- animate
-- duration
-- waapi
-- web animations api
+  - API
+  - Animation
+  - EffectTiming
+  - Experimental
+  - KeyframeEffect
+  - Property
+  - Reference
+  - Web Animations
+  - animate
+  - duration
+  - waapi
+  - web animations api
 browser-compat: api.EffectTiming.duration
 ---
-<div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The <strong><code>duration</code></strong> property of the dictionary
-  {{domxref("EffectTiming")}} in the <a href="/en-US/docs/Web/API/Web_Animations_API">Web
-    Animations API</a> specifies the duration in milliseconds that a single iteration
-  (from beginning to end) the animation should take to complete.</p>
+The **`duration`** property of the dictionary
+{{domxref("EffectTiming")}} in the [Web
+Animations API](/en-US/docs/Web/API/Web_Animations_API) specifies the duration in milliseconds that a single iteration
+(from beginning to end) the animation should take to complete.
 
-<div class="note">
-  <p><strong>Note:</strong> {{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
+> **Note:** {{domxref("Element.animate()")}},
+> {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
     "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} all accept an object of timing properties including
-    <code>duration</code>. The value of <code>duration</code> corresponds directly
-    to {{domxref("AnimationEffectTimingReadOnly.duration")}} in
-    {{domxref("AnimationEffectReadOnly.timing", "timing")}} objects returned by
-    {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and
-    {{domxref("KeyframeEffect")}}.</p>
-</div>
+> `duration`. The value of `duration` corresponds directly
+> to {{domxref("AnimationEffectTimingReadOnly.duration")}} in
+> {{domxref("AnimationEffectReadOnly.timing", "timing")}} objects returned by
+> {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and
+> {{domxref("KeyframeEffect")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>timingProperties</em> = {
-  duration: <em>durationInMilliseconds</em> | "auto"
+```js
+var timingProperties = {
+  duration: durationInMilliseconds | "auto"
 };
 
-<em>timingProperties</em>.duration = <em>durationInMilliseconds</em> | "auto";
-</pre>
+timingProperties.duration = durationInMilliseconds | "auto";
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The number of milliseconds long a single beginning-to-end iteration of the animation
-  should take. The default is <code>"auto"</code>. This value must not be negative;
-  otherwise, it can have any value (including positive infinity).</p>
+The number of milliseconds long a single beginning-to-end iteration of the animation
+should take. The default is `"auto"`. This value must not be negative;
+otherwise, it can have any value (including positive infinity).
 
-<div class="note">
-  <p><strong>Note:</strong> Currently, a value of <code>"auto"</code> is the same as specifying 0.0. This is a
-    forwards-compatibility measure since in the future, "auto" will be expanded to take
-    into account the duration of any child effects. Consider using <code>"auto"</code>
-    rather than 0 if that makes sense.</p>
-</div>
+> **Note:** Currently, a value of `"auto"` is the same as specifying 0.0. This is a
+> forwards-compatibility measure since in the future, "auto" will be expanded to take
+> into account the duration of any child effects. Consider using `"auto"`
+> rather than 0 if that makes sense.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>The specified value is either a string other than <code>"auto"</code>, a number less
-    than zero, {{jsxref("NaN")}}, or some other type of object entirely.</dd>
-</dl>
+- `TypeError`
+  - : The specified value is either a string other than `"auto"`, a number less
+    than zero, {{jsxref("NaN")}}, or some other type of object entirely.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Pool of
-    Tears</a> example, each tear is passed a random <code>duration</code> via its timing
-  object:</p>
+In the [Pool of
+Tears](http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010) example, each tear is passed a random `duration` via its timing
+object:
 
-<pre class="brush: js">// Randomizer function
+```js
+// Randomizer function
 var getRandomMsRange = function(min, max) {
   return Math.random() * (max - min) + min;
 }
@@ -88,29 +84,27 @@ tears.forEach(function(el) {
        iterations: Infinity,
        easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
     });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-  <li>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Element.animate()")}},
+  {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
     "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} all accept an object of timing properties including this one.
-  </li>
-  <li>The value of this property corresponds to property of the same name in
-    {{domxref("AnimationEffectReadOnly.timing")}},
-    {{domxref("KeyframeEffectReadOnly.timing")}},
-    and {{domxref("KeyframeEffect.timing")}}).</li>
-  <li>CSS's {{cssxref("transition-duration")}} and {{cssxref("animation-duration")}}
-    properties</li>
-</ul>
+- The value of this property corresponds to property of the same name in
+  {{domxref("AnimationEffectReadOnly.timing")}},
+  {{domxref("KeyframeEffectReadOnly.timing")}},
+  and {{domxref("KeyframeEffect.timing")}}).
+- CSS's {{cssxref("transition-duration")}} and {{cssxref("animation-duration")}}
+  properties

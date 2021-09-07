@@ -8,53 +8,37 @@ tags:
   - RsaOaepParams
   - Web Crypto API
 ---
-<div>{{ APIRef("Web Crypto API") }}</div>
+{{ APIRef("Web Crypto API") }}
 
-<p>The <strong><code>RsaOaepParams</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}}, when using the <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA_OAEP</a> algorithm.</p>
+The **`RsaOaepParams`** dictionary of the [Web Crypto API ](/en-US/docs/Web/API/Web_Crypto_API)represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}}, when using the [RSA_OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) algorithm.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>name</code></dt>
- <dd>A {{domxref("DOMString")}}. This should be set to <code>RSA-OAEP</code>.</dd>
- <dt><code>label</code> {{optional_inline}}</dt>
- <dd>
- <p>A {{domxref("BufferSource")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext. A digest of the label is part of the input to the encryption operation.</p>
+- `name`
+  - : A {{domxref("DOMString")}}. This should be set to `RSA-OAEP`.
+- `label` {{optional_inline}}
 
- <p>Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.</p>
- </dd>
-</dl>
+  - : A {{domxref("BufferSource")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext. A digest of the label is part of the input to the encryption operation.
 
-<h2 id="Examples">Examples</h2>
+    Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
 
-<p>See the examples for {{domxref("SubtleCrypto.encrypt()")}} and {{domxref("SubtleCrypto.decrypt()")}}.</p>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+See the examples for {{domxref("SubtleCrypto.encrypt()")}} and {{domxref("SubtleCrypto.decrypt()")}}.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-RsaOaepParams', 'SubtleCrypto.RsaOaepParams') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+| Specification                                                                                                    | Status                                   | Comment |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------- |
+| {{ SpecName('Web Crypto API', '#dfn-RsaOaepParams', 'SubtleCrypto.RsaOaepParams') }} | {{ Spec2('Web Crypto API') }} |         |
 
-<p>Browsers that support the "RSA-OAEP" algorithm for the {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}} methods will support this type.</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+Browsers that support the "RSA-OAEP" algorithm for the {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}} methods will support this type.
 
-<ul>
- <li>{{domxref("SubtleCrypto.encrypt()")}}.</li>
- <li>{{domxref("SubtleCrypto.decrypt()")}}.</li>
- <li>{{domxref("SubtleCrypto.wrapKey()")}}.</li>
- <li>{{domxref("SubtleCrypto.unwrapKey()")}}.</li>
-</ul>
+## See also
+
+- {{domxref("SubtleCrypto.encrypt()")}}.
+- {{domxref("SubtleCrypto.decrypt()")}}.
+- {{domxref("SubtleCrypto.wrapKey()")}}.
+- {{domxref("SubtleCrypto.unwrapKey()")}}.

@@ -8,146 +8,54 @@ tags:
   - closeEvent
 browser-compat: api.CloseEvent.code
 ---
-<div>{{APIRef("Websockets API")}}</div>
+{{APIRef("Websockets API")}}
 
-<p class="summary">The <strong><code>code</code></strong> read-only property of the {{domxref("CloseEvent")}} interface returns the close code sent by the server.</p>
+The **`code`** read-only property of the {{domxref("CloseEvent")}} interface returns the close code sent by the server.
 
-<h3>Value</h3>
-<p>A status code. As detailed in the following table, sourced from <a href="https://www.iana.org/assignments/websocket/websocket.xml#close-code-number">the IANA website</a>:</p>
+### Value
 
-<table class="standard-table">
-  <thead>
-    <tr>
-     <th>Status code</th>
-     <th>Name</th>
-     <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>0</code>–<code>999</code></td>
-    <td></td>
-    <td><strong>Reserved and not used.</strong></td>
-   </tr>
-   <tr>
-    <td><code>1000</code></td>
-    <td>Normal Closure</td>
-    <td>The connection successfully completed the purpose for which it was created.</td>
-   </tr>
-   <tr>
-    <td><code>1001</code></td>
-    <td>Going Away</td>
-    <td>The endpoint is going away, either because of a server failure or because the browser is navigating away from the page that opened the connection.</td>
-   </tr>
-   <tr>
-    <td><code>1002</code></td>
-    <td>Protocol Error</td>
-    <td>The endpoint is terminating the connection due to a protocol error.</td>
-   </tr>
-   <tr>
-    <td><code>1003</code></td>
-    <td>Unsupported Data</td>
-    <td>The connection is being terminated because the endpoint received data of a type it cannot accept. (For example, a text-only endpoint received binary data.)</td>
-   </tr>
-   <tr>
-    <td><code>1004</code></td>
-    <td></td>
-    <td><strong>Reserved.</strong> A meaning might be defined in the future.</td>
-   </tr>
-   <tr>
-    <td><code>1005</code></td>
-    <td>No Status Received</td>
-    <td>Indicates that no status code was provided even though one was expected.</td>
-   </tr>
-   <tr>
-    <td><code>1006</code></td>
-    <td>Abnormal Closure</td>
-    <td>Indicates that a connection was closed abnormally (that is, with no close frame being sent) when a status code is expected.</td>
-   </tr>
-   <tr>
-    <td><code>1007</code></td>
-    <td>Invalid frame payload data</td>
-    <td>The endpoint is terminating the connection because a message was received that contained inconsistent data (e.g., non-UTF-8 data within a text message).</td>
-   </tr>
-   <tr>
-    <td><code>1008</code></td>
-    <td>Policy Violation</td>
-    <td>The endpoint is terminating the connection because it received a message that violates its policy. This is a generic status code, used when codes 1003 and 1009 are not suitable.</td>
-   </tr>
-   <tr>
-    <td><code>1009</code></td>
-    <td>Message too big</td>
-    <td>The endpoint is terminating the connection because a data frame was received that is too large.</td>
-   </tr>
-   <tr>
-    <td><code>1010</code></td>
-    <td>Missing Extension</td>
-    <td>The client is terminating the connection because it expected the server to negotiate one or more extension, but the server didn't.</td>
-   </tr>
-   <tr>
-    <td><code>1011</code></td>
-    <td>Internal Error</td>
-    <td>The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.</td>
-   </tr>
-   <tr>
-    <td><code>1012</code></td>
-    <td>Service Restart</td>
-    <td>The server is terminating the connection because it is restarting. [<a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Ref</a>]</td>
-   </tr>
-   <tr>
-    <td><code>1013</code></td>
-    <td>Try Again Later</td>
-    <td>The server is terminating the connection due to a temporary condition, e.g. it is overloaded and is casting off some of its clients. [<a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Ref</a>]</td>
-   </tr>
-   <tr>
-    <td><code>1014</code></td>
-    <td>Bad Gateway</td>
-    <td>The server was acting as a gateway or proxy and received an invalid response from the upstream server. This is similar to 502 HTTP Status Code.</td>
-   </tr>
-   <tr>
-    <td><code>1015</code></td>
-    <td>TLS Handshake</td>
-    <td><strong>Reserved.</strong> Indicates that the connection was closed due to a failure to perform a TLS handshake (e.g., the server certificate can't be verified).</td>
-   </tr>
-   <tr>
-    <td><code>1016</code>–<code>1999</code></td>
-    <td></td>
-    <td><strong>Reserved for future use by the WebSocket standard.</strong></td>
-   </tr>
-   <tr>
-    <td><code>2000</code>–<code>2999</code></td>
-    <td></td>
-    <td><strong>Reserved for use by WebSocket extensions.</strong></td>
-   </tr>
-   <tr>
-    <td><code>3000</code>–<code>3999</code></td>
-    <td></td>
-    <td>Available for use by libraries and frameworks. <strong>May not</strong> be used by applications. Available for registration at the IANA via first-come, first-serve.</td>
-   </tr>
-   <tr>
-    <td><code>4000</code>–<code>4999</code></td>
-    <td></td>
-    <td>Available for use by applications.</td>
-   </tr>
-  </tbody>
- </table>
+A status code. As detailed in the following table, sourced from [the IANA website](https://www.iana.org/assignments/websocket/websocket.xml#close-code-number):
 
- <div class="notecard note">
-   <p><strong>Note:</strong> The 1xxx codes are only WebSocket-internal and not for the same meaning by the transported data (like when the application-layer protocol is invalid). The only permitted codes to be specified in Firefox are 1000 and 3000 to 4999 [<a href="https://searchfox.org/mozilla-central/rev/bf81d741ff5dd11bb364ef21306da599032fd479/dom/websocket/WebSocket.cpp#2533">Source</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1467107">Bug</a>].</p>
- </div>
+| Status code   | Name                       | Description                                                                                                                                                                                                    |
+| ------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `0`–`999`     |                            | **Reserved and not used.**                                                                                                                                                                                     |
+| `1000`        | Normal Closure             | The connection successfully completed the purpose for which it was created.                                                                                                                                    |
+| `1001`        | Going Away                 | The endpoint is going away, either because of a server failure or because the browser is navigating away from the page that opened the connection.                                                             |
+| `1002`        | Protocol Error             | The endpoint is terminating the connection due to a protocol error.                                                                                                                                            |
+| `1003`        | Unsupported Data           | The connection is being terminated because the endpoint received data of a type it cannot accept. (For example, a text-only endpoint received binary data.)                                                    |
+| `1004`        |                            | **Reserved.** A meaning might be defined in the future.                                                                                                                                                        |
+| `1005`        | No Status Received         | Indicates that no status code was provided even though one was expected.                                                                                                                                       |
+| `1006`        | Abnormal Closure           | Indicates that a connection was closed abnormally (that is, with no close frame being sent) when a status code is expected.                                                                                    |
+| `1007`        | Invalid frame payload data | The endpoint is terminating the connection because a message was received that contained inconsistent data (e.g., non-UTF-8 data within a text message).                                                       |
+| `1008`        | Policy Violation           | The endpoint is terminating the connection because it received a message that violates its policy. This is a generic status code, used when codes 1003 and 1009 are not suitable.                              |
+| `1009`        | Message too big            | The endpoint is terminating the connection because a data frame was received that is too large.                                                                                                                |
+| `1010`        | Missing Extension          | The client is terminating the connection because it expected the server to negotiate one or more extension, but the server didn't.                                                                             |
+| `1011`        | Internal Error             | The server is terminating the connection because it encountered an unexpected condition that prevented it from fulfilling the request.                                                                         |
+| `1012`        | Service Restart            | The server is terminating the connection because it is restarting. [[Ref](https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html)]                                                                   |
+| `1013`        | Try Again Later            | The server is terminating the connection due to a temporary condition, e.g. it is overloaded and is casting off some of its clients. [[Ref](https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html)] |
+| `1014`        | Bad Gateway                | The server was acting as a gateway or proxy and received an invalid response from the upstream server. This is similar to 502 HTTP Status Code.                                                                |
+| `1015`        | TLS Handshake              | **Reserved.** Indicates that the connection was closed due to a failure to perform a TLS handshake (e.g., the server certificate can't be verified).                                                           |
+| `1016`–`1999` |                            | **Reserved for future use by the WebSocket standard.**                                                                                                                                                         |
+| `2000`–`2999` |                            | **Reserved for use by WebSocket extensions.**                                                                                                                                                                  |
+| `3000`–`3999` |                            | Available for use by libraries and frameworks. **May not** be used by applications. Available for registration at the IANA via first-come, first-serve.                                                        |
+| `4000`–`4999` |                            | Available for use by applications.                                                                                                                                                                             |
 
-<h2 id="Examples">Examples</h2>
+> **Note:** The 1xxx codes are only WebSocket-internal and not for the same meaning by the transported data (like when the application-layer protocol is invalid). The only permitted codes to be specified in Firefox are 1000 and 3000 to 4999 \[[Source](https://searchfox.org/mozilla-central/rev/bf81d741ff5dd11bb364ef21306da599032fd479/dom/websocket/WebSocket.cpp#2533), [Bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1467107)].
 
-<p>The following example prints the value of <code>code</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">WebSocket.onclose = function(event) {
+The following example prints the value of `code` to the console.
+
+```js
+WebSocket.onclose = function(event) {
   console.log(event.code);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

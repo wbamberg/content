@@ -2,43 +2,43 @@
 title: PaymentDetailsUpdate.shippingAddressErrors
 slug: Web/API/PaymentDetailsUpdate/shippingAddressErrors
 tags:
-- API
-- Address
-- Errors
-- Payment Request
-- Payment Request API
-- PaymentDetailsUpdate
-- Property
-- Reference
-- Shipping
-- Validation
-- payment
-- shippingAddressErrors
+  - API
+  - Address
+  - Errors
+  - Payment Request
+  - Payment Request API
+  - PaymentDetailsUpdate
+  - Property
+  - Reference
+  - Shipping
+  - Validation
+  - payment
+  - shippingAddressErrors
 browser-compat: api.PaymentDetailsUpdate.shippingAddressErrors
 ---
-<div>{{APIRef("Payment Request API")}}{{securecontext_header}}{{Deprecated_header}}{{Non-standard_header}}</div>
+{{APIRef("Payment Request API")}}{{securecontext_header}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The {{domxref("PaymentDetailsUpdate")}} dictionary's
-    <code><strong>shippingAddressErrors</strong></code> property, if present,  contains an
-    {{domxref("AddressErrors")}} object whose contents provide error messages for one or
-    more of the values in the {{domxref("PaymentAddress")}} specified as
-    {{domxref("PaymentRequest.shippingAddress")}}.</p>
+The {{domxref("PaymentDetailsUpdate")}} dictionary's
+**`shippingAddressErrors`** property, if present,  contains an
+{{domxref("AddressErrors")}} object whose contents provide error messages for one or
+more of the values in the {{domxref("PaymentAddress")}} specified as
+{{domxref("PaymentRequest.shippingAddress")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>addressErrors</em> = <em>PaymentDetailsUpdate</em>.shippingAddressErrors;</pre>
+```js
+var addressErrors = PaymentDetailsUpdate.shippingAddressErrors;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AddressErrors")}} object, which contains {{domxref("DOMString")}}s
-  describing errors in the properties of a {{domxref("PaymentAddress")}}. For each
-  property in <code>PaymentAddress</code>, a property by the same name is found in
-  <code>shippingAddressErrors</code> if and only if a validation error occurred for that
-  property. In that case, the property in <code>shippingAddressErrors</code> is a string
-  describing the validation error, ideally including suggestions about fixing the error.
-</p>
+An {{domxref("AddressErrors")}} object, which contains {{domxref("DOMString")}}s
+describing errors in the properties of a {{domxref("PaymentAddress")}}. For each
+property in `PaymentAddress`, a property by the same name is found in
+`shippingAddressErrors` if and only if a validation error occurred for that
+property. In that case, the property in `shippingAddressErrors` is a string
+describing the validation error, ideally including suggestions about fixing the error.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

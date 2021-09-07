@@ -2,116 +2,84 @@
 title: Node.compareDocumentPosition()
 slug: Web/API/Node/compareDocumentPosition
 tags:
-- API
-- Compare Nodes
-- DOM
-- Method
-- Node
-- Position
-- Reference
-- compareDocumentPosition
+  - API
+  - Compare Nodes
+  - DOM
+  - Method
+  - Node
+  - Position
+  - Reference
+  - compareDocumentPosition
 browser-compat: api.Node.compareDocumentPosition
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The
-    <code><strong>Node.compareDocumentPosition()</strong></code> method reports the
-    position of the given node relative to another node in any document — not just the
-    given node’s document.</p>
+The
+**`Node.compareDocumentPosition()`** method reports the
+position of the given node relative to another node in any document — not just the
+given node’s document.
 
-<p>The return value is a <a
-    href="https://en.wikipedia.org/wiki/Mask_(computing)">bitmask</a> of the following
-  values:</p>
+The return value is a [bitmask](<https://en.wikipedia.org/wiki/Mask_(computing)>) of the following
+values:
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>DOCUMENT_POSITION_DISCONNECTED</code></td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td><code>DOCUMENT_POSITION_PRECEDING</code></td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td><code>DOCUMENT_POSITION_FOLLOWING</code></td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td><code>DOCUMENT_POSITION_CONTAINS</code></td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td><code>DOCUMENT_POSITION_CONTAINED_BY</code></td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <td><code>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</code></td>
-      <td>32</td>
-    </tr>
-  </tbody>
-</table>
+| Name                                        | Value |
+| ------------------------------------------- | ----- |
+| `DOCUMENT_POSITION_DISCONNECTED`            | 1     |
+| `DOCUMENT_POSITION_PRECEDING`               | 2     |
+| `DOCUMENT_POSITION_FOLLOWING`               | 4     |
+| `DOCUMENT_POSITION_CONTAINS`                | 8     |
+| `DOCUMENT_POSITION_CONTAINED_BY`            | 16    |
+| `DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC` | 32    |
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>compareMask</em> = <em>node</em>.compareDocumentPosition(<em>otherNode</em>)
-</pre>
+```js
+compareMask = node.compareDocumentPosition(otherNode)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>otherNode</code></dt>
-  <dd>The other <code>Node</code> with which to compare the first
-    <em><code>node</code></em>’s document position.</dd>
-</dl>
+- `otherNode`
+  - : The other `Node` with which to compare the first
+    _`node`_’s document position.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An integer value whose bits represent the <code>otherNode</code>'s relationship to the
-  calling <code>node</code>.</p>
+An integer value whose bits represent the `otherNode`'s relationship to the
+calling `node`.
 
-<p>More than one bit is set if multiple scenarios apply. For example, if
-  <code>otherNode</code> is located earlier in the document <strong><em>and</em></strong>
-  contains the <code>node</code> on which <code>compareDocumentPosition()</code> was
-  called, then both the <code>DOCUMENT_POSITION_CONTAINS</code> and
-  <code>DOCUMENT_POSITION_PRECEDING</code> bits would be set, producing a value of 10
-  (<code>0x0A</code>).</p>
+More than one bit is set if multiple scenarios apply. For example, if
+`otherNode` is located earlier in the document **_and_**
+contains the `node` on which `compareDocumentPosition()` was
+called, then both the `DOCUMENT_POSITION_CONTAINS` and
+`DOCUMENT_POSITION_PRECEDING` bits would be set, producing a value of 10
+(`0x0A`).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">const head = document.head;
+```js
+const head = document.head;
 const body = document.body;
 
-if (head.compareDocumentPosition(body) &amp; Node.DOCUMENT_POSITION_FOLLOWING) {
+if (head.compareDocumentPosition(body) & Node.DOCUMENT_POSITION_FOLLOWING) {
   console.log('Well-formed document');
 } else {
-  console.error('&lt;head&gt; is not before &lt;body&gt;');
+  console.error('<head> is not before <body>');
 }
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> Because the result returned by
-    <code>compareDocumentPosition()</code> is a bitmask, the <a
-      href="/en-US/docs/JavaScript/Reference/Operators/Bitwise_Operators">bitwise AND
-      operator</a> must be used for meaningful results.</p>
-</div>
+> **Note:** Because the result returned by
+> `compareDocumentPosition()` is a bitmask, the [bitwise AND
+> operator](/en-US/docs/JavaScript/Reference/Operators/Bitwise_Operators) must be used for meaningful results.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><code><a href="/en-US/docs/DOM/Node.contains">Node.contains()</a></code></li>
-</ul>
+- [`Node.contains()`](/en-US/docs/DOM/Node.contains)

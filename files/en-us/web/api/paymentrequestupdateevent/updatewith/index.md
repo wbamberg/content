@@ -17,35 +17,33 @@ tags:
   - updateWith
 browser-compat: api.PaymentRequestUpdateEvent.updateWith
 ---
-<p>{{APIRef("Payment Request API")}}{{securecontext_header}}</p>
+{{APIRef("Payment Request API")}}{{securecontext_header}}
 
-<p>The <strong><code>updateWith()</code></strong> method of the
-    {{domxref("PaymentRequestUpdateEvent")}} interface updates the details of an existing
-    {{domxref("PaymentRequest")}}.</p>
+The **`updateWith()`** method of the
+{{domxref("PaymentRequestUpdateEvent")}} interface updates the details of an existing
+{{domxref("PaymentRequest")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>paymentRequestUpdateEvent</em>.updateWith(<em>details</em>);</pre>
+```js
+paymentRequestUpdateEvent.updateWith(details);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>details</code></dt>
-  <dd>A {{domxref("PaymentDetailsUpdate")}} object specifying the changes applied to the
+- `details`
+  - : A {{domxref("PaymentDetailsUpdate")}} object specifying the changes applied to the
     payment request:
     {{page("/en-US/docs/Web/API/PaymentDetailsUpdate", "Properties")}}
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
