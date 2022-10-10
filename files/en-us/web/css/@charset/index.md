@@ -1,5 +1,5 @@
 ---
-title: '@charset'
+title: "@charset"
 slug: Web/CSS/@charset
 page-type: css-at-rule
 tags:
@@ -38,9 +38,7 @@ As there are several ways to define the character encoding of a style sheet, the
 
 ### Formal syntax
 
-```
-@charset "<charset>";
-```
+{{csssyntax}}
 
 - _charset_
   - : A {{cssxref("&lt;string&gt;")}} denoting the character encoding to be used. It must be the name of a web-safe character encoding defined in the [IANA-registry](https://www.iana.org/assignments/character-sets/character-sets.xhtml), and must be double-quoted, following exactly one space character (U+0020), and immediately terminated with a semicolon. If several names are associated with an encoding, only the one marked with _preferred_ must be used.
@@ -50,11 +48,11 @@ As there are several ways to define the character encoding of a style sheet, the
 ### Valid and invalid charset declarations
 
 ```css
-@charset "UTF-8";       /* Set the encoding of the style sheet to Unicode UTF-8 */
+@charset "UTF-8"; /* Set the encoding of the style sheet to Unicode UTF-8 */
 @charset 'iso-8859-15'; /* Invalid, wrong quoting style used */
-@charset  "UTF-8";      /* Invalid, more than one space */
- @charset "UTF-8";      /* Invalid, there is a character (a space) before the at-rule */
-@charset UTF-8;         /* Invalid, without ' or ", the charset is not a CSS {{cssxref("&lt;string&gt;")}} */
+@charset "UTF-8"; /* Invalid, more than one space */
+@charset "UTF-8"; /* Invalid, there is a character (a space) before the at-rule */
+@charset UTF-8; /* Invalid, without ' or ", the charset is not a CSS {{cssxref("&lt;string&gt;")}} */
 ```
 
 ## Specifications

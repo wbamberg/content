@@ -106,11 +106,7 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 
 ## Formal syntax
 
-```
-@supports <supports-condition> {
-  <stylesheet>
-}
-```
+{{csssyntax}}
 
 ## Examples
 
