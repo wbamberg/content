@@ -37,6 +37,9 @@
     "ru": "Руководства",
     "zh-CN": "指南"
   },
+  "Tutorial": {
+    "en-US": "Tutorial"
+  },
   "Implemented_by": {
     "en-US": "Implemented by:",
     "es": "Implementado por:",
