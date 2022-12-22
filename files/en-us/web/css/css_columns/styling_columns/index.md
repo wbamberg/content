@@ -2,6 +2,7 @@
 title: Styling columns
 slug: Web/CSS/CSS_Columns/Styling_Columns
 page-type: guide
+weight: 30
 tags:
   - CSS
   - CSS Multi-column Layout
