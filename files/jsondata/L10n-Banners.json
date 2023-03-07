@@ -1,0 +1,54 @@
+{
+  "Deprecated_description": {
+    "en-US": "This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the <a href='#browser_compatibility'>compatibility table</a> at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.",
+    "es": "Esta característica ya no se recomienda. Aunque es posible que algunos navegadores aún lo admitan, probablemente ya se ha eliminado de los estándares web relevantes, está en proceso de eliminación o solo se conserva por motivos de compatibilidad. Evite usarlo y actualice el código existente si es posible; consulte la <a href='#browser_compatibility'>tabla de compatibilidad</a> en la parte inferior de esta página para orientar su decisión. Tenga en cuenta que esta característica puede dejar de funcionar en cualquier momento.",
+    "fr": "Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.",
+    "ja": "この機能は非推奨になりました。まだ対応しているブラウザーがあるかもしれませんが、すでに関連するウェブ標準から削除されているか、削除の手続き中であるか、互換性のためだけに残されている可能性があります。使用を避け、できれば既存のコードは更新してください。このページの下部にある<a href='#browser_compatibility'>互換性一覧表</a>を見て判断してください。この機能は突然動作しなくなる可能性があることに注意してください。",
+    "ru": "Эта возможность была удалена из веб-стандартов. Хотя некоторые браузеры по-прежнему могут поддерживать её, она находится в процессе удаления. Не используйте её ни в старых, ни в новых проектах. Страницы или веб-приложения, использующие её, могут в любой момент сломаться.",
+    "zh-CN": "不再推荐使用该特性。虽然一些浏览器仍然支持它，但也许已从相关的 web 标准中移除，也许正准备移除或出于兼容性而保留。请尽量不要使用该特性，并更新现有的代码；参见本页面底部的<a href='#浏览器兼容性'>兼容性表格</a>以指导你作出决定。请注意，该特性随时可能无法正常工作。",
+    "zh-TW": "不推薦使用此功能。雖可能有一些瀏覽器仍然支援它，但也許已自相關的網頁標準中移除、正準備移除、或僅為了維持相容性而保留。避免使用此功能，盡可能更新現有程式；請參考頁面底部的<a href='#瀏覽器相容性'>相容性表格</a>來下決定。請注意：本功能可能隨時停止運作。"
+  },
+  "Deprecated_title": {
+    "en-US": "Deprecated",
+    "es": "Obsoleto",
+    "fr": "Obsolète",
+    "ja": "非推奨",
+    "ko": "지원이 중단되었습니다",
+    "ru": "Устарело",
+    "zh-CN": "已弃用",
+    "zh-TW": "已棄用"
+  },
+  "Experimental_description": {
+    "en-US": "This is an <a href='/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#experimental'>experimental technology</a><br />Check the <a href='#browser_compatibility'>Browser compatibility table</a> carefully before using this in production.",
+    "es": "Esta es una <a href='/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#experimental'>tecnología experimental</a><br />Comprueba la <a href='#browser_compatibility'>Tabla de compabilidad de navegadores</a> cuidadosamente antes de usarla en producción.",
+    "fr": "Cette fonction est expérimentale<br />Puisque cette fonction est toujours en développement dans certains navigateurs, veuillez consulter le <a href='#compatibilité_des_navigateurs'>tableau de compatibilité</a> pour les préfixes à utiliser selon les navigateurs.<br />Il convient de noter qu'une fonctionnalité expérimentale peut voir sa syntaxe ou son comportement modifié dans le futur en fonction des évolutions de la spécification.",
+    "ja": "これは<a href='/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的'>実験的な機能</a>です。<br />本番で使用する前に<a href='#ブラウザーの互換性'>ブラウザー互換性一覧表</a>をチェックしてください。",
+    "pt-BR": "Esta é uma <a href='/pt-BR/docs/MDN/Contribute/Guidelines/Conventions_definitions#experimental'>tecnologia experimental</a><br />Verifique a <a href='#browser_compatibility'>tabela de compatibilidade entre Navegadores</a> cuidadosamente antes de usar essa funcionalidade em produção.",
+    "ru": "Это экспериментальная технология<br />Так как спецификация этой технологии ещё не стабилизировалась, смотрите <a href='#browser_compatibility'>таблицу совместимости</a> по поводу использования в различных браузерах. Также заметьте, что синтаксис и поведение экспериментальной технологии может измениться в будущих версиях браузеров, вслед за изменениями спецификации.",
+    "zh-CN": "这是一个实验中的功能<br />此功能某些浏览器尚在开发中，请参考<a href='#浏览器兼容性'>浏览器兼容性表格</a>以得到在不同浏览器中适合使用的前缀。由于该功能对应的标准文档可能被重新修订，所以在未来版本的浏览器中该功能的语法和行为可能随之改变。",
+    "zh-TW": "這是一個實驗中的功能<br />此功能在某些瀏覽器尚在開發中，請參考<a href='#browser_compatibility'>兼容表格</a>以得到不同瀏覽器用的前輟。"
+  },
+  "Experimental_title": {
+    "en-US": "Experimental"
+  },
+  "NonStandard_description": {
+    "en-US": "This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.",
+    "es": "Esta característica no es parte de los estándares. No la uses en sitios Web en producción: no funcionará para todos los usuarios. Podrían haber también incompatibilidades considerables entre distintas implementaciones y el comportamiento podría cambiar en el futuro.",
+    "fr": "Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.",
+    "ja": "この機能は標準ではなく、標準化の予定もありません。公開されているウェブサイトには使用しないでください。ユーザーによっては使用できないことがあります。実装ごとに大きな差があることもあり、将来は振る舞いが変わるかもしれません。",
+    "ko": "이 기능은 비표준이므로 실제 프로덕션에서 사용하지 마세요. 모든 사용자 환경에서 작동하지 않을 수 도 있으며, 미래에 호환성 문제가 생길 수 있습니다.",
+    "ru": "Эта возможность не является стандартной и стандартизировать её пока никто не собирается. Не используйте её на сайтах, смотрящих во внешний мир: она будет работать не у всех пользователей. Также могут присутствовать большие несовместимости между реализациями и её поведение может в будущем измениться.",
+    "zh-CN": "该特性是非标准的，请尽量不要在生产环境中使用它！",
+    "zh-TW": "不推薦使用此功能。雖可能有一些瀏覽器仍然支援它，但也許已自相關的網頁標準中移除、正準備移除、或僅為了維持相容性而保留。避免使用此功能，盡可能更新現有程式；請參考頁面底部的<a href='#瀏覽器相容性'>相容性表格</a>來下決定。請注意：本功能可能隨時停止運作。"
+  },
+  "NonStandard_title": {
+    "en-US": "Non-standard",
+    "es": "No estándar",
+    "fr": "Non standard",
+    "ja": "非標準",
+    "ko": "비표준",
+    "ru": "Не стандартно",
+    "zh-CN": "非标准",
+    "zh-TW": "非標準"
+  }
+}
